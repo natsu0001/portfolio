@@ -32,7 +32,7 @@ const Navbar = () => {
           </ul>
 
           {/* CTA */}
-          <button className="hidden ">
+          <button className="hidden md:inline-block px-4 py-2 bg-amber-600 text-white rounded hover:bg-amber-900 transition">
             Let's Connect
           </button>
 
