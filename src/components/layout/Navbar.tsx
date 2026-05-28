@@ -45,6 +45,19 @@ const Navbar = () => {
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
 
+          {/* Mobile Navi */}
+
+          {isOpen && (
+            <div>
+              {NAV_LINKS.map(link => (
+                <a>
+                  {link.label}
+                </a>
+              ))}
+            </div>
+
+          )}
+
       
 
       
