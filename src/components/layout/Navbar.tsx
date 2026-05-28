@@ -48,13 +48,17 @@ const Navbar = () => {
           {/* Mobile Navi */}
 
           {isOpen && (
-            <div>
+            <div className="absolute top-full left-0 w-full bg-black flex flex-col items-end gap-6 py-6 md:hidden">
               {NAV_LINKS.map(link => (
-                <a>
+                <a key={link.href} href={link.href}>
                   {link.label}
                 </a>
               ))}
+              <button className="px-4 py-2 bg-amber-600 text-white rounded hover:bg-amber-900 transition">
+                Let's Connect
+              </button>
             </div>
+            
 
           )}
 
