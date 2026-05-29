@@ -3,45 +3,19 @@ import SectionWrapper from "../layout/SectionWrapper";
 
 const HeroSection = () => {
   return (
-    <SectionWrapper id="home">
-      <Container>
-        <div className="flex flex-col gap-10">
+    <div>
+      <div>fullStack Devloper</div>
+      <div> I BUILD<br />DIGITAL<br />EXPERIENCES</div>
+      <div>Through code, motion and storytelling.</div>
+      <div className= "hidden">I'm a fullstack developer and visual storyteller passionate about building
+          scalable web applications and capturing real moments.</div>
+      <div>image</div>
+      <div>
+        <button>view my work</button>
+        <button>download resume</button>
+      </div>
 
-          {/* Top Content */}
-          <div className="flex flex-col gap-6">
-
-            <p>
-              Fullstack Developer
-            </p>
-
-            <h1>
-              I Build Digital Experiences
-            </h1>
-
-            <p>
-              Through code, motion and storytelling.
-            </p>
-
-            <div>
-              <button>
-                View My Work
-              </button>
-
-              <button>
-                Download Resume
-              </button>
-            </div>
-
-          </div>
-
-          {/* Hero Image */}
-          <div>
-            Hero Image
-          </div>
-
-        </div>
-      </Container>
-    </SectionWrapper>
+    </div>
   );
 };
 
