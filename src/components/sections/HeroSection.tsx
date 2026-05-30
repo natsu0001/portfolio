@@ -3,8 +3,8 @@ import SectionWrapper from "../layout/SectionWrapper";
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center  min-h-screen">
-       <div className= "flex-1">
+    <div className="flex flex-col md:flex-row min-h-screen">
+       <div className= "flex-1 p-8">
          <div>fullStack Devloper</div>
          <div> I BUILD<br />DIGITAL<br />EXPERIENCES</div>
          <div>Through code, motion and storytelling.</div>
