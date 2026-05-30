@@ -4,9 +4,15 @@ import heroImage from "@/assets/hero.png";
 const HeroSection = () => {
   return (
     <div className="flex flex-col md:flex-row min-h-screen">
-       <div className= "flex-1 p-4">
+       <div className= "md:w-1/2 p-4 max-w-[600px]">
          <div>fullStack Devloper</div>
-         <div> I BUILD<br />DIGITAL<br />EXPERIENCES</div>
+         <h1 className="text-[clamp(3rem,4vw,5rem)] leading-[0.9] font-bold max-w-[700px]">
+            I BUILD
+            <br />
+            DIGITAL
+            <br />
+            EXPERIENCES
+        </h1>
          <div>Through code, motion and storytelling.</div>
          <div className= "hidden md:block">I'm a fullstack developer and visual storyteller passionate about building
           scalable web applications and capturing real moments.
@@ -17,13 +23,13 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="flex-1 flex flex-col items-center justify-center">
+      <div className="md:w-1/2 flex flex-col items-center ">
 
               <div className="relative">
                 <img
                  src={heroImage}
                  alt="Abhishek"
-                 className="max-w-md w-full"
+                 className="max-w-md w-full max-h-[100vh] object-contain"
                  />
                 <div className="absolute inset-x-0 bottom-0 h-70 bg-gradient-to-t from-black/100 to-transparent">
                  <div className= "absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col md:hidden gap-4">
