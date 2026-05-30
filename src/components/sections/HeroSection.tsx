@@ -4,7 +4,7 @@ import heroImage from "@/assets/hero.png";
 const HeroSection = () => {
   return (
     <div className="flex flex-col md:flex-row min-h-screen">
-       <div className= "flex-1 p-8">
+       <div className= "flex-1 p-4">
          <div>fullStack Devloper</div>
          <div> I BUILD<br />DIGITAL<br />EXPERIENCES</div>
          <div>Through code, motion and storytelling.</div>
@@ -25,12 +25,13 @@ const HeroSection = () => {
                  alt="Abhishek"
                  className="max-w-md w-full"
                  />
-
+                <div className="absolute inset-x-0 bottom-0 h-70 bg-gradient-to-t from-black/100 to-transparent">
                  <div className= "absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col md:hidden gap-4">
-              <button>view my work</button>
-              <button>download resume</button>
-              </div>
-              </div>
+                  <button>view my work</button>
+                  <button>download resume</button>
+                 </div>
+                </div>
+             </div>
               
 
       </div>
