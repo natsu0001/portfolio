@@ -36,7 +36,7 @@ const HeroSection = () => {
                  className="max-w-md w-full max-h-[100vh] object-contain"
                  />
                 <div className="absolute inset-x-0 bottom-0 h-70 bg-gradient-to-t from-black/100 to-transparent">
-                 <div className= "absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col md:hidden gap-4">
+                 <div className= "absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center-safe gap-4 md:hidden ">
                   <Button variant="default">view my work</Button>
                   <Button variant="default">download resume</Button>
                  </div>
