@@ -13,11 +13,12 @@ const HeroSection = () => {
             <br />
             EXPERIENCES
         </h1>
-         <div className="text-base font-semibold tracking-[0.05em] text-accent uppercase mb-2">
+         <div className="text-base font-semibold tracking-[0.05em] text-accent uppercase mb-2 md:max-w-[250px]">
            Through code, motion and storytelling.
          </div>
-         <div className= "hidden md:block">I'm a fullstack developer and visual storyteller passionate about building
-          scalable web applications and capturing real moments.
+         <div className= "hidden md:block leading-relaxed">I'm a fullstack developer and visual storyteller <br/>
+          passionate about building scalable web <br/>
+          applications and capturing real moments.
          </div>
          <div className="hidden md:flex gap-4 mt-4">
          <button>view my work</button>
