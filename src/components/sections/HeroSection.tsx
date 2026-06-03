@@ -1,6 +1,6 @@
 import Container from "../layout/Container";
 import heroImage from "@/assets/hero.png";
-
+import { Button } from '@/components/ui/button';
 const HeroSection = () => {
   return (
     <div className="relative flex flex-col md:flex-row min-h-screen overflow-hidden">
@@ -22,8 +22,8 @@ const HeroSection = () => {
           applications and capturing real moments.
          </div>
          <div className="hidden md:flex gap-4 mt-4">
-         <button>view my work</button>
-         <button>download resume</button>
+         <Button variant="default">view my work</Button>
+         <Button variant="default">download resume</Button>
         </div>
       </div>
 
@@ -37,8 +37,8 @@ const HeroSection = () => {
                  />
                 <div className="absolute inset-x-0 bottom-0 h-70 bg-gradient-to-t from-black/100 to-transparent">
                  <div className= "absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col md:hidden gap-4">
-                  <button>view my work</button>
-                  <button>download resume</button>
+                  <Button variant="default">view my work</Button>
+                  <Button variant="default">download resume</Button>
                  </div>
                 </div>
              </div>
