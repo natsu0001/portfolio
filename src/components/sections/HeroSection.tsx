@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 const HeroSection = () => {
   return (
     <section className="relative overflow-hidden">
-      <div className="mx-auto max-w-[1600px] min-h-[80vh] flex flex-col md:flex-row items-center gap-10 xl:gap-20 px-6 lg:px-10 xl:px-16">
+      <div className="mx-auto max-w-[1600px] min-h-[75vh] flex flex-col md:flex-row items-center gap-10 xl:gap-20 px-6 lg:px-10 xl:px-16">
 
         {/* Left Content */}
         <div className="w-full md:w-1/2 xl:w-[55%] flex flex-col justify-center">
@@ -19,10 +19,10 @@ const HeroSection = () => {
               text-white
               leading-[0.9]
               mb-6
-              text-[clamp(3rem,5vw,3.5rem)]
-              md:text-[clamp(4rem,5vw,7rem)]
-              lg:text-[clamp(5rem,6vw,7rem)]
-              xl:text-[clamp(6rem,6vw,8.5rem)]
+              text-[clamp(2.5rem,5vw,3.5rem)]
+              md:text-[clamp(3.5rem,5vw,4.5rem)]
+              lg:text-[clamp(4.5rem,6vw,5.5rem)]
+              xl:text-[clamp(5.5rem,6vw,6.5rem)]
             "
           >
             I BUILD
