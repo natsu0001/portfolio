@@ -22,8 +22,8 @@ const HeroSection = () => {
           applications and capturing real moments.
          </div>
          <div className="hidden md:flex gap-4 mt-4 w-full max-w-[420px]">
-         <Button className="flex-1" variant="default">view my work</Button>
-         <Button className="flex-1" variant="default">download resume</Button>
+         <Button className="flex-1 h-12 uppercase tracking-[0.15em]" variant="primary">view my work</Button>
+         <Button className="flex-1 h-12 uppercase tracking-[0.15em]" variant="outline">download resume</Button>
         </div>
       </div>
 
@@ -36,9 +36,9 @@ const HeroSection = () => {
                  className="max-w-md w-full max-h-[100vh] object-contain"
                  />
                 <div className="absolute inset-x-0 bottom-0 h-70 bg-gradient-to-t from-black/100 to-transparent">
-                 <div className= "absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center-safe gap-4 md:hidden ">
-                  <Button variant="default">view my work</Button>
-                  <Button variant="default">download resume</Button>
+                 <div className= "absolute bottom-4 left-1/2 -translate-x-1/2 w-[80%] flex flex-col gap-4 md:hidden ">
+                  <Button className="h-12 uppercase tracking-[0.15em]" variant="primary">view my work</Button>
+                  <Button className="h-12 uppercase tracking-[0.15em]" variant="outline">download resume</Button>
                  </div>
                 </div>
              </div>
