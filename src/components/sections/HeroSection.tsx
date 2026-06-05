@@ -21,9 +21,9 @@ const HeroSection = () => {
           passionate about building scalable web <br/>
           applications and capturing real moments.
          </div>
-         <div className="hidden md:flex gap-4 mt-4">
-         <Button variant="default">view my work</Button>
-         <Button variant="default">download resume</Button>
+         <div className="hidden md:flex gap-4 mt-4 w-full max-w-[420px]">
+         <Button className="flex-1" variant="default">view my work</Button>
+         <Button className="flex-1" variant="default">download resume</Button>
         </div>
       </div>
 
