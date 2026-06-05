@@ -9,7 +9,7 @@ const HeroSection = () => {
         {/* Left Content */}
         <div className="w-full md:w-1/2 xl:w-[55%] flex flex-col justify-center">
 
-          <span className="text-sm font-bold tracking-[0.15em] uppercase mb-4">
+          <span className="text-sm font-bold tracking-[0.15em] uppercase mt-1 mb-4">
             Fullstack Developer
           </span>
 
