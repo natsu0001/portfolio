@@ -1,6 +1,6 @@
 import Container from "../layout/Container";
 import SectionWrapper from "../layout/SectionWrapper";
-
+import { projects } from "@/data/projects";
 const ProjectsSection = () => {
   return (
     <SectionWrapper id="projects">
@@ -17,17 +17,15 @@ const ProjectsSection = () => {
           </div>
 
           <div className="flex gap-4 overflow-auto snap-x snap-mandatory ">
-            {projects.slice(0, 3).map((project) => (
-              <article
-                key={project.id}
-                className="
-                  w-full
-                  snap-center
-                  md:min-w-0">
-                    <projectCard project={project} />
-              
-             </article>
-            ))}
+           {[1, 2, 3, 4].map((item) => (
+  <article
+    key={item}
+    className="min-w-full snap-center md:min-w-0"
+  >
+    Project Card {item}
+  </article>
+))}
+          
 
           </div>
 
