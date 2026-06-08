@@ -11,23 +11,53 @@ const ProjectsSection = () => {
           <div className="flex flex-col ">
             <p>Featured Projects</p>
 
-            <h2>
+            <h2 className="text-3xl font-bold">
               Things I've built recently
             </h2>
           </div>
 
-          <div className="flex gap-4 overflow-auto snap-x snap-mandatory ">
-           {[1, 2, 3, 4].map((item) => (
-  <article
-    key={item}
-    className="min-w-full snap-center md:min-w-0"
-  >
-    Project Card {item}
-  </article>
-))}
-          
+         <div className="mt-10 flex gap-4 overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-2 xl:grid-cols-4 md:overflow-visible">
+  {projects.slice(0, 4).map((project) => (
+    <article
+      key={project.id}
+      className="
+        min-w-[90%]
+        sm:min-w-[70%]
+        md:min-w-0
+        h-[350px]
+        snap-center
+        rounded-2xl
+        border
+        border-zinc-800
+        bg-zinc-900
+        p-6
+        shadow-lg
+        flex
+        flex-col
+      "
+    >
+      {/* Project Image Placeholder */}
+      <div className="h-40 rounded-xl bg-zinc-800 mb-4" />
 
-          </div>
+      <h3 className="text-xl font-semibold mb-2">
+        {project.title}
+      </h3>
+
+      <p className="text-zinc-400 text-sm flex-grow">
+        {project.description}
+      </p>
+
+      <div className="mt-4 flex gap-2 flex-wrap">
+        <span className="px-2 py-1 text-xs rounded bg-zinc-800">
+          React
+        </span>
+        <span className="px-2 py-1 text-xs rounded bg-zinc-800">
+          TypeScript
+        </span>
+      </div>
+    </article>
+  ))}
+</div>
 
         </div>
 
