@@ -16,19 +16,18 @@ const ProjectsSection = () => {
             </h2>
           </div>
 
-          <div className="flex flex-wrap gap-4">
-
-            <article>
-              Project Card
-            </article>
-
-            <article>
-              Project Card
-            </article>
-
-            <article>
-              Project Card
-            </article>
+          <div className="flex gap-4 overflow-auto snap-x snap-mandatory ">
+            {projects.slice(0, 3).map((project) => (
+              <article
+                key={project.id}
+                className="
+                  w-full
+                  snap-center
+                  md:min-w-0">
+                    <projectCard project={project} />
+              
+             </article>
+            ))}
 
           </div>
 
