@@ -8,7 +8,7 @@ const ProjectsSection = () => {
 
         <div>
 
-          <div>
+          <div className="flex flex-col ">
             <p>Featured Projects</p>
 
             <h2>
@@ -16,7 +16,7 @@ const ProjectsSection = () => {
             </h2>
           </div>
 
-          <div>
+          <div className="flex flex-wrap gap-4">
 
             <article>
               Project Card
