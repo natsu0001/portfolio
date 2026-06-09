@@ -26,7 +26,7 @@ const HeroSection = () => {
         "
       >
         {/* Left Content */}
-        <div className="w-full md:w-1/2 xl:w-[70%] flex flex-col justify-center">
+        <div className="w-full md:w-1/2 xl:w-[80%] flex flex-col justify-center">
           <span className="text-sm font-bold tracking-[0.15em] uppercase mt-1 mb-4">
             Fullstack Developer
           </span>
@@ -37,8 +37,8 @@ const HeroSection = () => {
               text-white
               leading-[0.9]
               mb-4
-              text-[2.25rem]
-              sm:text-[3rem]
+              text-[2rem]
+              sm:text-[2.5rem]
               md:text-[clamp(3.5rem,5vw,4.5rem)]
               lg:text-[clamp(4.5rem,6vw,5.5rem)]
               xl:text-[clamp(5.5rem,6vw,6.5rem)]
@@ -112,8 +112,8 @@ const HeroSection = () => {
                 sm:max-w-sm
                 md:max-w-md
                 lg:max-w-xl
-                xl:max-w-2xl
-                2xl:max-w-3xl
+                xl:max-w-xl
+                2xl:max-w-2xl
                 max-h-screen
                 object-contain
               "
