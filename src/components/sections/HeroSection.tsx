@@ -4,11 +4,27 @@ import { Button } from "@/components/ui/button";
 const HeroSection = () => {
   return (
     <section className="relative overflow-hidden">
-      <div className="mx-auto max-w-[1600px] min-h-[75vh] flex flex-col md:flex-row items-center gap-10 xl:gap-20 px-6 lg:px-10 xl:px-16">
-
+      <div
+        className="
+          mx-auto
+          max-w-[1600px]
+          min-h-[90vh]
+          sm:min-h-[75vh]
+          flex
+          flex-col
+          md:flex-row
+          items-center
+          gap-6
+          sm:gap-10
+          xl:gap-20
+          px-4
+          sm:px-6
+          lg:px-10
+          xl:px-16
+        "
+      >
         {/* Left Content */}
         <div className="w-full md:w-1/2 xl:w-[55%] flex flex-col justify-center">
-
           <span className="text-sm font-bold tracking-[0.15em] uppercase mt-1 mb-4">
             Fullstack Developer
           </span>
@@ -18,8 +34,9 @@ const HeroSection = () => {
               font-bold
               text-white
               leading-[0.9]
-              mb-6
-              text-[clamp(2.5rem,5vw,3.5rem)]
+              mb-4
+              text-[2.75rem]
+              sm:text-[3.5rem]
               md:text-[clamp(3.5rem,5vw,4.5rem)]
               lg:text-[clamp(4.5rem,6vw,5.5rem)]
               xl:text-[clamp(5.5rem,6vw,6.5rem)]
@@ -39,7 +56,7 @@ const HeroSection = () => {
               uppercase
               tracking-[0.08em]
               text-accent
-              mb-6
+              mb-4
               max-w-[260px]
               xl:max-w-[320px]
             "
@@ -49,13 +66,13 @@ const HeroSection = () => {
 
           <p
             className="
-              hidden md:block
+            hidden md:block
               text-sm
               leading-[1.8]
               text-text-2
               max-w-[400px]
               xl:max-w-[500px]
-              mb-10
+              mb-8
             "
           >
             I'm a fullstack developer and visual storyteller passionate
@@ -83,15 +100,14 @@ const HeroSection = () => {
 
         {/* Right Image */}
         <div className="w-full md:w-1/2 xl:w-[45%] flex justify-center items-end">
-
           <div className="relative">
-
             <img
               src={heroImage}
               alt="Abhishek"
               className="
                 w-full
-                max-w-sm
+                max-w-[280px]
+                sm:max-w-sm
                 md:max-w-md
                 lg:max-w-xl
                 xl:max-w-2xl
@@ -102,10 +118,8 @@ const HeroSection = () => {
             />
 
             {/* Mobile Gradient Overlay */}
-            <div className="absolute inset-x-0 bottom-0 h-72 bg-gradient-to-t from-black via-black/60 to-transparent md:hidden">
-
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[85%] flex flex-col gap-4">
-
+            <div className="absolute inset-x-0 bottom-0 h-48 sm:h-72 bg-gradient-to-t from-black via-black/60 to-transparent md:hidden">
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[90%] max-w-sm flex flex-col gap-4">
                 <Button
                   className="h-12 uppercase tracking-[0.15em]"
                   variant="primary"
@@ -119,10 +133,8 @@ const HeroSection = () => {
                 >
                   Download Resume
                 </Button>
-
               </div>
             </div>
-
           </div>
         </div>
       </div>
