@@ -1,9 +1,10 @@
 import heroImage from "@/assets/hero.png";
 import { Button } from "@/components/ui/button";
+import SectionWrapper from "../layout/SectionWrapper";
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden">
+    <SectionWrapper id="home">
       <div
         className="
           mx-auto
@@ -139,7 +140,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 };
 
