@@ -4,13 +4,12 @@ import SectionWrapper from "../layout/SectionWrapper";
 
 const HeroSection = () => {
   return (
-    <SectionWrapper id="home">
+    <SectionWrapper id="home"  >
       <div
         className="
           mx-auto
           max-w-[1600px]
-          min-h-[90vh]
-          sm:min-h-[75vh]
+          
           flex
           flex-col
           md:flex-row
