@@ -14,17 +14,18 @@ const HeroSection = () => {
           flex-col
           md:flex-row
           items-center
-          gap-6
-          sm:gap-10
+          gap-4
+          sm:gap-8
+          md:gap-10
           xl:gap-20
           px-4
           sm:px-6
           lg:px-10
-          xl:px-16
+          xl:px-16 items-start
         "
       >
         {/* Left Content */}
-        <div className="w-full md:w-1/2 xl:w-[55%] flex flex-col justify-center">
+        <div className="w-full md:w-1/2 xl:w-[70%] flex flex-col justify-center">
           <span className="text-sm font-bold tracking-[0.15em] uppercase mt-1 mb-4">
             Fullstack Developer
           </span>
@@ -35,8 +36,8 @@ const HeroSection = () => {
               text-white
               leading-[0.9]
               mb-4
-              text-[2.75rem]
-              sm:text-[3.5rem]
+              text-[2.25rem]
+              sm:text-[3rem]
               md:text-[clamp(3.5rem,5vw,4.5rem)]
               lg:text-[clamp(4.5rem,6vw,5.5rem)]
               xl:text-[clamp(5.5rem,6vw,6.5rem)]
@@ -106,7 +107,7 @@ const HeroSection = () => {
               alt="Abhishek"
               className="
                 w-full
-                max-w-[280px]
+                max-w-[320px]
                 sm:max-w-sm
                 md:max-w-md
                 lg:max-w-xl
