@@ -9,17 +9,17 @@ const Navbar = () => {
 
   return (
     <nav className="relative z-50 w-full">
-      <div className="mx-auto max-w-[1600px] px-6 lg:px-10 xl:px-16">
+      <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-10 xl:px-16">
 
-        <div className="flex items-center justify-between h-15">
+        <div className="flex items-center justify-between h-16 sm:h-20">
 
           {/* Logo */}
-          <div className="text-xl lg:text-2xl font-bold tracking-wider">
+          <div className="text-lg sm:text-xl lg:text-2xl font-bold tracking-wider">
             ABHISHEK
           </div>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex items-center gap-3 xl:gap-7">
+          <ul className="hidden lg:flex items-center gap-4 xl:gap-7">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <a
@@ -41,7 +41,7 @@ const Navbar = () => {
           {/* Desktop CTA */}
           <button
             className="
-              hidden md:inline-flex
+              hidden lg:inline-flex
               items-center
               justify-center
               h-12
@@ -60,11 +60,15 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden"
+            className="
+              lg:hidden
+              p-2
+              rounded-md
+            "
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle Menu"
           >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
+            {isOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
 
         </div>
@@ -73,18 +77,17 @@ const Navbar = () => {
         {isOpen && (
           <div
             className="
-              md:hidden
-              absolute
-              top-full
-              left-0
-              w-full
-              bg-black
+              lg:hidden
+              fixed
+              inset-0
+              top-16
+              bg-black/95
+              backdrop-blur-lg
               border-t
               border-white/10
-              backdrop-blur-md
             "
           >
-            <div className="flex flex-col items-center gap-8 py-10">
+            <div className="flex flex-col items-center justify-center h-full gap-8 px-6">
 
               {NAV_LINKS.map((link) => (
                 <a
@@ -92,9 +95,10 @@ const Navbar = () => {
                   href={link.href}
                   onClick={() => setIsOpen(false)}
                   className="
-                    text-sm
+                    text-base
                     uppercase
                     tracking-[0.15em]
+                    py-2
                   "
                 >
                   {link.label}
@@ -103,8 +107,10 @@ const Navbar = () => {
 
               <button
                 className="
+                  mt-4
+                  w-full
+                  max-w-xs
                   h-12
-                  px-8
                   rounded-md
                   bg-amber-600
                   text-white
