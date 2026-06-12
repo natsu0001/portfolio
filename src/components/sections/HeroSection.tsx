@@ -39,8 +39,7 @@ const HeroSection = () => {
               text-[2rem]
               sm:text-[2.5rem]
               md:text-[clamp(3.5rem,5vw,4.5rem)]
-              lg:text-[clamp(4.5rem,6vw,5.5rem)]
-              xl:text-[clamp(5.5rem,6vw,6.5rem)]
+              
             "
           >
             I BUILD
