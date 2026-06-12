@@ -12,7 +12,7 @@ const SectionWrapper = ({
   return (
     <section
       id={id}
-      className="py-2 md:py-5 lg:py-14"
+      className="py-2 sm:py-3 md:py-4 lg:py-5 xl:py-6"
     >
       {children}
     </section>

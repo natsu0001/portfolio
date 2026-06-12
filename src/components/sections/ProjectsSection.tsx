@@ -3,7 +3,7 @@ import SectionWrapper from "../layout/SectionWrapper";
 import { projects } from "@/data/projects";
 const ProjectsSection = () => {
   return (
-    <section id="projects">
+    <SectionWrapper id="projects">
       <Container >
 
         <div>
@@ -62,7 +62,7 @@ const ProjectsSection = () => {
         </div>
 
       </Container>
-    </section>
+    </SectionWrapper>
   );
 };
 

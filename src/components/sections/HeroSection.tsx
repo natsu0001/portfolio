@@ -1,31 +1,29 @@
 import heroImage from "@/assets/hero.png";
 import { Button } from "@/components/ui/button";
 import SectionWrapper from "../layout/SectionWrapper";
+import Container from "../layout/Container";
 
 const HeroSection = () => {
   return (
     <SectionWrapper id="home"  >
+      <Container>
+     
       <div
         className="
-          mx-auto
-          max-w-[1600px]
+          
+         
           
           flex
           flex-col
           md:flex-row
-          items-center
-          gap-4
-          sm:gap-8
-          md:gap-10
-          xl:gap-20
-          px-4
-          sm:px-6
-          lg:px-10
-          xl:px-16 items-start
+          
+         gap-8
+         lg:gap-12
+          items-start
         "
       >
         {/* Left Content */}
-        <div className="w-full md:w-1/2 xl:w-[80%] flex flex-col justify-center">
+        <div className="w-full md:w-1/2 xl:w-[55%] flex flex-col justify-center">
           <span className="text-sm font-bold tracking-[0.15em] uppercase mt-1 mb-4">
             Fullstack Developer
           </span>
@@ -139,6 +137,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+      </Container>
     </SectionWrapper>
   );
 };
