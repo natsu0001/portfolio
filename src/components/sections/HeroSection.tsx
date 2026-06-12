@@ -20,10 +20,12 @@ const HeroSection = () => {
          gap-8
          lg:gap-12
           items-start
+          
+    
         "
       >
         {/* Left Content */}
-        <div className="w-full md:w-1/2 xl:w-[55%] flex flex-col justify-center">
+        <div className="flex-1">
           <span className="text-sm font-bold tracking-[0.15em] uppercase mt-1 mb-4">
             Fullstack Developer
           </span>
@@ -98,7 +100,7 @@ const HeroSection = () => {
         </div>
 
         {/* Right Image */}
-        <div className="w-full md:w-1/2 xl:w-[45%] flex justify-center items-end">
+        <div className="flex-1 flex justify-center">
           <div className="relative">
             <img
               src={heroImage}
@@ -108,10 +110,8 @@ const HeroSection = () => {
                 max-w-[320px]
                 sm:max-w-sm
                 md:max-w-md
-                lg:max-w-xl
-                xl:max-w-xl
-                2xl:max-w-2xl
-                max-h-screen
+                  
+                
                 object-contain
               "
             />

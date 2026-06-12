@@ -3,13 +3,14 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "@/data";
-
+import Container from "./Container";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="relative z-50 w-full">
-      <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-10 xl:px-16">
+      <Container>
+    
 
         <div className="flex items-center justify-between h-16 sm:h-20">
 
@@ -124,7 +125,8 @@ const Navbar = () => {
             </div>
           </div>
         )}
-      </div>
+     
+      </Container>
     </nav>
   );
 };
