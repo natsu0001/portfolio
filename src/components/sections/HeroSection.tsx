@@ -10,20 +10,12 @@ const HeroSection = () => {
      
       <div
         className="
-          
-         
-          
           flex
           flex-col
           justify-center
-          
           sm:flex-row
-          
          gap-8
          lg:gap-12
-          
-          
-    
         "
       >
         {/* Left Content */}
@@ -40,8 +32,7 @@ const HeroSection = () => {
               mb-4
               text-[3rem]
               sm:text-[2.5rem]
-              md:text-[clamp(3.5rem,5vw,4.5rem)]
-              
+              md:text-[clamp(3.5rem,5vw,4.5rem)]  
             "
           >
             I BUILD
@@ -111,8 +102,6 @@ const HeroSection = () => {
                 max-w-[400px]
                 sm:max-w-[250px]
                 md:max-w-md
-                  
-                
                 object-contain
               "
             />
