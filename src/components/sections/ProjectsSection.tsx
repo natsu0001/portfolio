@@ -24,7 +24,7 @@ const ProjectsSection = () => {
         min-w-[90%]
         sm:min-w-[70%]
         md:min-w-0
-        h-[350px]
+        min-h-[350px]
         snap-center
         rounded-2xl
         border
@@ -48,12 +48,14 @@ const ProjectsSection = () => {
       </p>
 
       <div className="mt-4 flex gap-2 flex-wrap">
-        <span className="px-2 py-1 text-xs rounded bg-zinc-800">
-          React
-        </span>
-        <span className="px-2 py-1 text-xs rounded bg-zinc-800">
-          TypeScript
-        </span>
+         {project.stack.map((tech) => (
+    <span
+      key={tech}
+      className="px-2 py-1 text-xs rounded bg-zinc-800"
+    >
+      {tech}
+    </span>
+  ))}
       </div>
     </article>
   ))}
