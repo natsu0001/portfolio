@@ -1,6 +1,8 @@
 import Container from "../layout/Container";
 import SectionWrapper from "../layout/SectionWrapper";
 import { projects } from "@/data/projects";
+import { ArrowUpRight } from "lucide-react";
+
 const ProjectsSection = () => {
   return (
     <SectionWrapper id="projects">
@@ -71,6 +73,42 @@ const ProjectsSection = () => {
   duration-300
 "
     >
+      <a
+  href={project.link || "#"}
+  aria-label={`View ${project.title}`}
+  className="
+    absolute
+    top-5
+    right-5
+
+    w-8
+    h-8
+
+    border
+    border-border
+
+    flex
+    items-center
+    justify-center
+
+    opacity-0
+    translate-x-1
+    -translate-y-1
+
+    transition-all
+    duration-200
+
+    group-hover:opacity-100
+    group-hover:translate-x-0
+    group-hover:translate-y-0
+  "
+>
+  <ArrowUpRight
+    size={14}
+    className="text-accent"
+  />
+</a>
+      
       {/* Project Image Placeholder */}
       <div
   className="
@@ -93,6 +131,7 @@ const ProjectsSection = () => {
   />
 
   {/* Placeholder content */}
+
   <div className="absolute inset-0 flex items-center justify-center">
     <span className="text-sm font-semibold tracking-widest text-accent/40 uppercase">
       {project.title}

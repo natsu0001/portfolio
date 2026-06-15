@@ -14,7 +14,7 @@ export const projects: Project[] = [
       "Tailwind",
       "Framer Motion",
     ],
-
+     link: "https://github.com/your-repo",
     image: "",
 
     github: "https://github.com/yourusername/portfolio",
@@ -37,7 +37,7 @@ export const projects: Project[] = [
       "Node.js",
       "Steam API",
     ],
-
+    link: "https://github.com/your-repo",
     image: "",
 
     github: "https://github.com/yourusername/steam-analytics",
