@@ -46,23 +46,59 @@ const ProjectsSection = () => {
     <article
       key={project.id}
       className="
-        min-w-[90%]
-        sm:min-w-[70%]
-        md:min-w-0
-        min-h-[350px]
-        snap-center
-        rounded-2xl
-        border
-        border-zinc-800
-        bg-zinc-900
-        p-6
-        shadow-lg
-        flex
-        flex-col
-      "
+  group
+  relative
+
+  min-w-[85%]
+  sm:min-w-[65%]
+  md:min-w-0
+
+  snap-center
+
+  border-b
+  border-r
+  border-border
+
+  p-6
+
+  flex
+  flex-col
+
+  bg-bg
+  hover:bg-bg-2
+
+  transition-colors
+  duration-300
+"
     >
       {/* Project Image Placeholder */}
-      <div className="h-40 rounded-xl bg-zinc-800 mb-4" />
+      <div
+  className="
+    relative
+    w-full
+    aspect-video
+    bg-bg-2
+    overflow-hidden
+    mb-4
+  "
+>
+  {/* Grid pattern */}
+  <div
+    className="absolute inset-0"
+    style={{
+      backgroundImage:
+        "linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px)",
+      backgroundSize: "20px 20px",
+    }}
+  />
+
+  {/* Placeholder content */}
+  <div className="absolute inset-0 flex items-center justify-center">
+    <span className="text-sm font-semibold tracking-widest text-accent/40 uppercase">
+      {project.title}
+    </span>
+  </div>
+</div>
 
       <h3 className="text-xl font-semibold mb-2">
         {project.title}
