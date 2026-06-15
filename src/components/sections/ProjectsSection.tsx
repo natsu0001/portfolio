@@ -16,7 +16,32 @@ const ProjectsSection = () => {
             </h2>
           </div>
 
-         <div className="mt-10 flex gap-4 overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-2 xl:grid-cols-4 md:overflow-visible">
+         <div
+  className="
+    mt-10
+
+    flex
+    gap-4
+
+    overflow-x-auto
+    snap-x
+    snap-mandatory
+    scroll-smooth
+
+    pb-4
+
+    [&::-webkit-scrollbar]:hidden
+    [-ms-overflow-style:none]
+    [scrollbar-width:none]
+
+    md:grid
+    md:grid-cols-2
+    xl:grid-cols-4
+
+    md:gap-0
+    md:overflow-visible
+  "
+>
   {projects.slice(0, 4).map((project) => (
     <article
       key={project.id}
