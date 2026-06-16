@@ -1,6 +1,6 @@
 
 import type { Project } from "@/types/project";
-
+import stem from "@/assets/projects/stem.png";
 export const projects: Project[] = [
   {
     id: 4,
@@ -15,7 +15,7 @@ export const projects: Project[] = [
       "Framer Motion",
     ],
      link: "https://github.com/your-repo",
-    image: "",
+    image: stem,
 
     github: "https://github.com/yourusername/portfolio",
 
@@ -38,7 +38,7 @@ export const projects: Project[] = [
       "Steam API",
     ],
     link: "https://github.com/your-repo",
-    image: "",
+    image: stem,
 
     github: "https://github.com/yourusername/steam-analytics",
 
@@ -63,7 +63,7 @@ export const projects: Project[] = [
   ],
 
   link: "#",
-  image: "",
+  image: stem,
 
   github: "#",
   live: "#",
@@ -85,7 +85,7 @@ export const projects: Project[] = [
   ],
 
   link: "#",
-  image: "",
+  image: stem,
 
   github: "#",
   live: "#",
@@ -106,7 +106,7 @@ export const projects: Project[] = [
   ],
 
   link: "#",
-  image: "",
+  image: stem,
 
   github: "#",
   live: "#",
@@ -127,7 +127,7 @@ export const projects: Project[] = [
   ],
 
   link: "#",
-  image: "",
+  image: stem,
 
   github: "#",
   live: "#",
@@ -149,7 +149,7 @@ export const projects: Project[] = [
   ],
 
   link: "#",
-  image: "",
+  image: stem,
 
   github: "#",
   live: "#",
@@ -171,7 +171,7 @@ export const projects: Project[] = [
   ],
 
   link: "#",
-  image: "",
+  image: stem,
 
   github: "#",
   live: "#",
@@ -192,7 +192,7 @@ export const projects: Project[] = [
   ],
 
   link: "#",
-  image: "",
+  image: stem,
 
   github: "#",
   live: "#",
@@ -213,7 +213,7 @@ export const projects: Project[] = [
   ],
 
   link: "#",
-  image: "",
+  image: stem,
 
   github: "#",
   live: "#",
