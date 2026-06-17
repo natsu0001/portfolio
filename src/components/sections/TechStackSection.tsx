@@ -1,56 +1,62 @@
 import Container from "../layout/Container";
 import SectionWrapper from "../layout/SectionWrapper";
+import TechCard from "./TechCard";
+import { techStack } from "@/data/tech";
 
-const TechStackSection = () => {
+const TechSection = () => {
   return (
-    <SectionWrapper id="tech-stack">
+    <SectionWrapper id="tech">
       <Container>
+        {/* Header */}
 
-        <div>
+        <div className="mb-12">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="w-8 h-px bg-accent" />
 
-          {/* Header */}
-          <div>
-
-            <p>
+            <p
+              className="
+                text-xs
+                font-semibold
+                tracking-[0.25em]
+                uppercase
+                text-accent
+              "
+            >
               Tech Stack
             </p>
-
-            <h2>
-              Technologies I work with
-            </h2>
-
           </div>
 
-          {/* Skills Grid */}
-          <div>
-
-            <div>
-              React
-            </div>
-
-            <div>
-              TypeScript
-            </div>
-
-            <div>
-              Next.js
-            </div>
-
-            <div>
-              Node.js
-            </div>
-
-            <div>
-              PostgreSQL
-            </div>
-
-          </div>
-
+          <h2
+            className="
+              text-4xl
+              md:text-5xl
+              font-bold
+              tracking-tight
+            "
+          >
+            Technologies I Work With
+          </h2>
         </div>
 
+        <div
+          className="
+            grid
+            gap-6
+            md:grid-cols-2
+            xl:grid-cols-3
+          "
+        >
+          {techStack.map((group) => (
+            <TechCard
+              key={group.category}
+              category={group.category}
+              technologies={group.technologies}
+            />
+          ))}
+        </div>
       </Container>
     </SectionWrapper>
   );
 };
 
-export default TechStackSection;
+export default TechSection;
