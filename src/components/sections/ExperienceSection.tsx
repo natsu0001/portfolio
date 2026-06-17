@@ -1,73 +1,65 @@
 import Container from "../layout/Container";
 import SectionWrapper from "../layout/SectionWrapper";
+import { experience } from "@/data/experience";
+import ExperienceItem from "./ExperienceItem";
 
 const ExperienceSection = () => {
   return (
     <SectionWrapper id="experience">
       <Container>
+        {/* Header */}
+        <div className="mb-12">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="w-8 h-px bg-accent" />
 
-        <div>
-
-          {/* Section Header */}
-          <div>
-
-            <p>
+            <p
+              className="
+                text-xs
+                font-semibold
+                tracking-[0.25em]
+                uppercase
+                text-accent
+              "
+            >
               Experience
             </p>
-
-            <h2>
-              My professional journey
-            </h2>
-
           </div>
 
-          {/* Timeline */}
-          <div>
-
-            <article>
-
-              <div>
-                2025 - Present
-              </div>
-
-              <div>
-
-                <h3>
-                  Fullstack Developer
-                </h3>
-
-                <p>
-                  Building scalable web applications.
-                </p>
-
-              </div>
-
-            </article>
-
-            <article>
-
-              <div>
-                2024 - 2025
-              </div>
-
-              <div>
-
-                <h3>
-                  Frontend Developer
-                </h3>
-
-                <p>
-                  Developed responsive interfaces.
-                </p>
-
-              </div>
-
-            </article>
-
-          </div>
-
+          <h2
+            className="
+              text-4xl
+              md:text-5xl
+              font-bold
+              tracking-tight
+            "
+          >
+            My Journey So Far
+          </h2>
         </div>
 
+        {/* Timeline */}
+        <div className="relative">
+          {/* Vertical Line */}
+          <div
+            className="
+              absolute
+              left-[5px]
+              top-0
+              bottom-0
+              w-px
+              bg-border
+            "
+          />
+
+          {experience.map((item) => (
+            <ExperienceItem
+              key={item.year}
+              year={item.year}
+              title={item.title}
+              description={item.description}
+            />
+          ))}
+        </div>
       </Container>
     </SectionWrapper>
   );
