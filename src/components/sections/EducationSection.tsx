@@ -1,65 +1,59 @@
 import Container from "../layout/Container";
 import SectionWrapper from "../layout/SectionWrapper";
+import EducationCard from "./EducationCard";
+import { education } from "@/data/education";
 
 const EducationSection = () => {
   return (
     <SectionWrapper id="education">
       <Container>
+        {/* Header */}
+        <div className="mb-12">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="w-8 h-px bg-accent" />
 
-        <div>
-
-          {/* Header */}
-          <div>
-
-            <p>
+            <p
+              className="
+                text-xs
+                font-semibold
+                tracking-[0.25em]
+                uppercase
+                text-accent
+              "
+            >
               Education
             </p>
-
-            <h2>
-              Education & Certifications
-            </h2>
-
           </div>
 
-          {/* Cards */}
-          <div>
-
-            <article>
-
-              <h3>
-                Bachelor of Computer Applications
-              </h3>
-
-              <p>
-                University Name
-              </p>
-
-              <span>
-                2021 - 2025
-              </span>
-
-            </article>
-
-            <article>
-
-              <h3>
-                Fullstack Web Development
-              </h3>
-
-              <p>
-                Udemy
-              </p>
-
-              <span>
-                Certificate
-              </span>
-
-            </article>
-
-          </div>
-
+          <h2
+            className="
+              text-4xl
+              md:text-5xl
+              font-bold
+              tracking-tight
+            "
+          >
+            Learning & Growth
+          </h2>
         </div>
 
+        <div
+          className="
+            grid
+            md:grid-cols-2
+            gap-6
+          "
+        >
+          {education.map((item) => (
+            <EducationCard
+              key={item.id}
+              degree={item.degree}
+              institution={item.institution}
+              duration={item.duration}
+              description={item.description}
+            />
+          ))}
+        </div>
       </Container>
     </SectionWrapper>
   );
