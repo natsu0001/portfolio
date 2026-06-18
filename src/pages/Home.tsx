@@ -9,6 +9,7 @@ import TechStackSection from "../components/sections/TechStackSection";
 import AboutSection from "../components/sections/AboutSection";
 //import ArchiveSection from "../components/sections/ArchiveSection";
 import ContactSection from "../components/sections/ContactSection";
+import Footer from "../components/sections/Footer";
 
 const Home = () => {
   return (
@@ -33,6 +34,8 @@ const Home = () => {
        
 
         <ContactSection />
+
+        <Footer />
       </main>
     </>
   );
