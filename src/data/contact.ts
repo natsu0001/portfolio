@@ -1,10 +1,10 @@
 export const contactData = {
   email: "your@email.com",
 
-  github: "https://github.com/yourusername",
+  github: "https://github.com",
 
   linkedin:
-    "https://linkedin.com/in/yourusername",
+    "https://linkedin.com",
 
   resume: "/resume.pdf",
 
