@@ -26,11 +26,11 @@ const Home = () => {
 
         <TechStackSection />
 
-        //archive section
+      
 
         <AboutSection />
 
-       //galary section
+       
 
         <ContactSection />
       </main>
