@@ -2,41 +2,17 @@ import Container from "../layout/Container";
 import SectionWrapper from "../layout/SectionWrapper";
 import { projects } from "@/data/projects";
 import { ArrowUpRight } from "lucide-react";
+import SectionHeading from "../common/SectionHeading";
 import ProjectCard from "./ProjectCard";
 const ProjectsSection = () => {
   return (
     <SectionWrapper id="projects">
       <Container>
         {/* Header */}
-        <div className="mb-12">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="w-8 h-px bg-accent" />
-
-            <p
-              className="
-                text-xs
-                font-semibold
-                tracking-[0.25em]
-                uppercase
-                text-accent
-              "
-            >
-              Featured Projects
-            </p>
-          </div>
-
-          <h2
-            className="
-              text-4xl
-              md:text-5xl
-              font-bold
-              tracking-tight
-              max-w-xl
-            "
-          >
-            Things I've built recently
-          </h2>
-        </div>
+<SectionHeading
+  label="Featured Projects"
+  title="Things I've built recently"
+/>
 
         {/* Projects */}
         <div
