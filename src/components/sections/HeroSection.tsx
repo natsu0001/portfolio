@@ -5,11 +5,11 @@ import Container from "../layout/Container";
 
 const HeroSection = () => {
   return (
-    <SectionWrapper id="home"  >
-      <Container>
+    <SectionWrapper id="home"   >
+      <Container >
      
       <div
-        className="
+        className="pt-17
           flex
           flex-col
           justify-center
