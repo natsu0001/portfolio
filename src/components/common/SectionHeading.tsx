@@ -12,7 +12,7 @@ const SectionHeading = ({
   return (
     <div className="mb-12">
       <div className="flex items-center gap-3 mb-4">
-        <span className="w-8 h-px bg-accent" />
+        <span className=" h-px bg-accent" />
 
         <p
           className="
@@ -29,7 +29,7 @@ const SectionHeading = ({
 
       <h2
         className="
-          text-4xl
+          text-3xl
           md:text-5xl
           font-bold
           tracking-tight
