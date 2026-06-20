@@ -16,13 +16,8 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-
-  
 
   return (
     <nav
@@ -32,66 +27,42 @@ const Navbar = () => {
         left-0
         right-0
         z-50
-
         transition-all
         duration-300
-
         ${
           scrolled
             ? "bg-bg/90 backdrop-blur-md border-b border-border"
-            : "bg-transparent"
+            : "bg-bg/70 backdrop-blur-sm"
         }
       `}
     >
       <Container>
-        <div className="flex items-center justify-between h-16 lg:h-[72px]">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a
             href="#home"
             className="
               text-lg
-              lg:text-xl
-
               font-bold
-              tracking-[0.15em]
+              tracking-wider
             "
           >
             ABHISHEK
             <span className="text-accent">.</span>
           </a>
 
-          {/* Desktop Navigation */}
-          <ul className="hidden lg:flex items-center gap-8">
+          {/* Desktop Nav */}
+          <ul className="hidden md:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
                   className="
-                    relative
-
                     text-sm
-                    uppercase
-                    tracking-[0.15em]
-
+                    font-medium
                     text-text-2
-
                     transition-colors
-                    duration-200
-
                     hover:text-accent
-
-                    after:absolute
-                    after:left-0
-                    after:-bottom-1
-
-                    after:h-px
-                    after:bg-accent
-
-                    after:w-0
-                    hover:after:w-full
-
-                    after:transition-all
-                    after:duration-300
                   "
                 >
                   {link.label}
@@ -100,139 +71,113 @@ const Navbar = () => {
             ))}
           </ul>
 
-          {/* Desktop CTA */}
-          <a
-            href="#contact"
-            className="
-              hidden
-              lg:inline-flex
-
-              items-center
-              gap-2
-
-              px-4
-              py-2
-
-              border
-              border-accent
-
-              text-accent
-              text-[0.7rem]
-
-              font-semibold
-              uppercase
-              tracking-[0.15em]
-
-              transition-all
-              duration-200
-
-              hover:bg-accent
-              hover:text-bg
-            "
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-current animate-pulse" />
-            Let's Connect
-          </a>
-
-          {/* Mobile Toggle */}
-          <button
-            className="
-              lg:hidden
-              p-2
-              text-text-2
-            "
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle Menu"
-          >
-            {isOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div
-            className="
-              lg:hidden
-
-              fixed
-              inset-0
-              top-16
-
-              bg-bg/95
-              backdrop-blur-md
-
-              border-t
-              border-border
-            "
-          >
-            <div
+          {/* Right Side */}
+          <div className="flex items-center gap-3">
+            <a
+              href="#contact"
               className="
-                flex
-                flex-col
+                hidden
+                md:inline-flex
                 items-center
-                justify-center
-
-                h-full
-
-                gap-8
-                px-6
+                px-4
+                py-2
+                rounded-lg
+                bg-accent
+                text-bg
+                text-sm
+                font-medium
+                transition-all
+                hover:opacity-90
               "
             >
-              {NAV_LINKS.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="
-                    text-sm
+              Let's Connect
+            </a>
 
-                    font-semibold
-
-                    uppercase
-                    tracking-[0.2em]
-
-                    text-text-2
-
-                    hover:text-accent
-
-                    transition-colors
-                  "
-                >
-                  {link.label}
-                </a>
-              ))}
-
-              <a
-                href="#contact"
-                onClick={() => setIsOpen(false)}
-                className="
-                  inline-flex
-                  items-center
-                  gap-2
-
-                  px-5
-                  py-2
-
-                  border
-                  border-accent
-
-                  text-accent
-
-                  text-xs
-                  font-semibold
-
-                  uppercase
-                  tracking-[0.2em]
-
-                  mt-4
-                "
-              >
-                <span className="w-1.5 h-1.5 rounded-full bg-current animate-pulse" />
-                Let's Connect
-              </a>
-            </div>
+            {/* Mobile Toggle */}
+            <button
+              className="
+                md:hidden
+                p-2
+                rounded-md
+                hover:bg-white/10
+              "
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle Menu"
+            >
+              {isOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
           </div>
-        )}
+        </div>
+
+        {/* Mobile Menu */}
+        <div
+          className={`
+            md:hidden
+            overflow-hidden
+            transition-all
+            duration-300
+            ${
+              isOpen
+                ? "max-h-[500px] opacity-100 pb-4"
+                : "max-h-0 opacity-0"
+            }
+          `}
+        >
+          <div
+            className="
+              mt-2
+              rounded-xl
+              border
+              border-border
+              bg-bg/95
+              backdrop-blur-md
+              p-3
+            "
+          >
+            <ul className="flex flex-col gap-1">
+              {NAV_LINKS.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="
+                      block
+                      px-4
+                      py-3
+                      rounded-lg
+                      text-text-2
+                      hover:bg-accent/10
+                      hover:text-accent
+                      transition-colors
+                    "
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href="#contact"
+              onClick={() => setIsOpen(false)}
+              className="
+                flex
+                items-center
+                justify-center
+                mt-3
+                w-full
+                rounded-lg
+                bg-accent
+                px-4
+                py-3
+                text-bg
+                font-medium
+              "
+            >
+              Let's Connect
+            </a>
+          </div>
+        </div>
       </Container>
     </nav>
   );
