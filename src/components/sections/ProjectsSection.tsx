@@ -27,8 +27,9 @@ const ProjectsSection = () => {
 
               border
               border-border
+              text-[0.6rem]
 
-              text-xs
+              md:text-xs
               uppercase
               tracking-[0.2em]
 

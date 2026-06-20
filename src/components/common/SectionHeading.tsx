@@ -10,7 +10,7 @@ const SectionHeading = ({
   description,
 }: SectionHeadingProps) => {
   return (
-    <div className="mb-12">
+    <div className="mb-5">
       <div className="flex items-center gap-3 mb-4">
         <span className=" h-px bg-accent" />
 
