@@ -2,6 +2,7 @@ import heroImage from "@/assets/hero.png";
 import { Button } from "@/components/ui/button";
 import SectionWrapper from "../layout/SectionWrapper";
 import Container from "../layout/Container";
+import { motion } from "motion/react"
 
 const HeroSection = () => {
   return (
@@ -9,7 +10,7 @@ const HeroSection = () => {
       <Container >
      
       <div
-        className="pt-17
+        className="pt-15
           flex
           flex-col
           justify-center
@@ -89,6 +90,7 @@ const HeroSection = () => {
               Download Resume
             </Button>
           </div>
+          
         </div>
 
         {/* Right Image */}
