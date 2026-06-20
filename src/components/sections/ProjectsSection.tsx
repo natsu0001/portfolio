@@ -14,7 +14,7 @@ const ProjectsSection = () => {
           label="Featured Projects"
           title="Things I've built recently"
         />
-          <div className="mt-12 flex justify-center">
+          <div className=" mt-10 flex justify-center">
           <a
             href="/projects"
             className="
