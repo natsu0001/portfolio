@@ -21,6 +21,9 @@ const Navbar = () => {
     };
   }, []);
 
+
+  
+
   return (
     <nav
       className={`
@@ -41,14 +44,13 @@ const Navbar = () => {
       `}
     >
       <Container>
-        <div className="flex items-center justify-between h-16 sm:h-20">
+        <div className="flex items-center justify-between h-16 lg:h-[72px]">
           {/* Logo */}
           <a
-            href="#hero"
+            href="#home"
             className="
               text-lg
-              sm:text-xl
-              lg:text-2xl
+              lg:text-xl
 
               font-bold
               tracking-[0.15em]
@@ -59,7 +61,7 @@ const Navbar = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <ul className="hidden lg:flex items-center gap-4 xl:gap-7">
+          <ul className="hidden lg:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <a
@@ -108,7 +110,7 @@ const Navbar = () => {
               items-center
               gap-2
 
-              px-5
+              px-4
               py-2
 
               border
