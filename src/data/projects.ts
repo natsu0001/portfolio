@@ -22,6 +22,9 @@ export const projects: Project[] = [
     live: "https://portfolio.com",
 
     featured: true,
+    year: "2026",
+role: "Fullstack Developer",
+status: "Completed",
   },
 
   {
@@ -45,6 +48,9 @@ export const projects: Project[] = [
     live: "https://steamanalytics.com",
 
     featured: true,
+    year: "2026",
+role: "Fullstack Developer",
+status: "Completed",
 
     
   },
@@ -69,6 +75,9 @@ export const projects: Project[] = [
   live: "#",
 
   featured: true,
+  year: "2026",
+role: "Fullstack Developer",
+status: "Completed",
 },
 {
   id: 1,
@@ -91,6 +100,9 @@ export const projects: Project[] = [
   live: "#",
 
   featured: true,
+  year: "2026",
+role: "Fullstack Developer",
+status: "Completed",
 },
 {
   id: 5,
@@ -112,6 +124,9 @@ export const projects: Project[] = [
   live: "#",
 
   featured: true,
+  year: "2026",
+role: "Fullstack Developer",
+status: "Completed",
 },
 {
   id: 6,
@@ -133,6 +148,9 @@ export const projects: Project[] = [
   live: "#",
 
   featured: true,
+  year: "2026",
+role: "Fullstack Developer",
+status: "Completed",
 },
 {
   id: 7,
@@ -155,6 +173,9 @@ export const projects: Project[] = [
   live: "#",
 
   featured: false,
+  year: "2026",
+role: "Fullstack Developer",
+status: "Completed",
 },
 {
   id: 8,
@@ -177,6 +198,9 @@ export const projects: Project[] = [
   live: "#",
 
   featured: true,
+  year: "2026",
+role: "Fullstack Developer",
+status: "Completed",
 },
 {
   id: 9,
@@ -198,6 +222,9 @@ export const projects: Project[] = [
   live: "#",
 
   featured: false,
+  year: "2026",
+role: "Fullstack Developer",
+status: "Completed",
 },
 {
   id: 10,
@@ -219,5 +246,8 @@ export const projects: Project[] = [
   live: "#",
 
   featured: true,
+  year: "2026",
+role: "Fullstack Developer",
+status: "Completed",
 }
 ];

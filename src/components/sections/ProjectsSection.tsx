@@ -4,17 +4,47 @@ import { projects } from "@/data/projects";
 import { ArrowUpRight } from "lucide-react";
 import SectionHeading from "../common/SectionHeading";
 import ProjectCard from "./ProjectCard";
+
 const ProjectsSection = () => {
   return (
     <SectionWrapper id="projects">
       <Container>
-        {/* Header */}
-<SectionHeading
-  label="Featured Projects"
-  title="Things I've built recently"
-/>
+      <div className="flex items-center justify-between"> 
+         <SectionHeading
+          label="Featured Projects"
+          title="Things I've built recently"
+        />
+          <div className="mt-12 flex justify-center">
+          <a
+            href="/projects"
+            className="
+              inline-flex
+              items-center
+              gap-2
 
-        {/* Projects */}
+              px-6
+              py-3
+
+              border
+              border-border
+
+              text-xs
+              uppercase
+              tracking-[0.2em]
+
+              transition-all
+              duration-300
+
+              hover:border-accent
+              hover:text-accent
+            "
+          >
+            View All Projects
+            <ArrowUpRight size={14} />
+          </a>
+        </div>
+        </div>
+
         <div
           className="
             mt-10
@@ -42,13 +72,16 @@ const ProjectsSection = () => {
           "
         >
           {projects.slice(0, 4).map((project, index) => (
-             <ProjectCard
-    key={project.id}
-    project={project}
-    index={index}
-  />
+            <ProjectCard
+              key={project.id}
+              project={project}
+              index={index}
+            />
           ))}
         </div>
+
+        {/* CTA */}
+      
       </Container>
     </SectionWrapper>
   );

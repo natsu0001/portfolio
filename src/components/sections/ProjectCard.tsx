@@ -12,10 +12,14 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
     <motion.article
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+      viewport={{
+        once: true,
+        margin: "-60px",
+      }}
       transition={{
-        duration: 0.5,
-        delay: index * 0.1,
+        duration: 0.6,
+        delay: index * 0.12,
+        ease: [0.16, 1, 0.3, 1],
       }}
       className="
         group
@@ -41,8 +45,11 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
         duration-300
 
         hover:bg-bg-2
+        hover:-translate-y-1
+        hover:border-accent/20
       "
     >
+      {/* Arrow Link */}
       <a
         href={project.link}
         target="_blank"
@@ -75,16 +82,22 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
           group-hover:translate-y-0
         "
       >
-        <ArrowUpRight size={14} className="text-accent" />
+        <ArrowUpRight
+          size={14}
+          className="text-accent"
+        />
       </a>
 
+      {/* Thumbnail */}
       <div
         className="
           relative
           w-full
           aspect-video
+
           bg-bg-2
           overflow-hidden
+
           mb-5
         "
       >
@@ -99,10 +112,10 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
               w-full
               object-cover
 
-              transition-transform
-              duration-500
+              transition-all
+              duration-700
 
-              group-hover:scale-105
+              group-hover:scale-110
             "
           />
         ) : (
@@ -122,10 +135,49 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
         )}
       </div>
 
+      {/* Metadata */}
+      <div className="flex items-center justify-between mb-3">
+        <span
+          className="
+            text-[10px]
+            uppercase
+            tracking-[0.2em]
+            text-accent
+          "
+        >
+          {project.year}
+        </span>
+
+        <span
+          className="
+            text-[10px]
+            uppercase
+            tracking-[0.2em]
+            text-text-2
+          "
+        >
+          {project.status}
+        </span>
+      </div>
+
+      <p
+        className="
+          text-[10px]
+          uppercase
+          tracking-[0.15em]
+          text-text-2
+          mb-2
+        "
+      >
+        {project.role}
+      </p>
+
+      {/* Accent Line */}
       <div
         className="
           h-px
-          w-0
+          w-8
+
           bg-accent
 
           transition-all
@@ -137,29 +189,34 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
         "
       />
 
+      {/* Title */}
       <h3
         className="
           text-sm
           font-semibold
           uppercase
           tracking-wide
+
           mb-3
         "
       >
         {project.title}
       </h3>
 
+      {/* Description */}
       <p
         className="
           text-[0.75rem]
           leading-relaxed
           text-text-2
+
           flex-grow
         "
       >
         {project.description}
       </p>
 
+      {/* Tech Stack */}
       <div className="mt-5 flex flex-wrap gap-2">
         {project.stack.map((tech) => (
           <span
