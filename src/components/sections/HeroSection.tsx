@@ -1,134 +1,318 @@
+"use client";
+
 import heroImage from "@/assets/hero.png";
 import { Button } from "@/components/ui/button";
 import SectionWrapper from "../layout/SectionWrapper";
 import Container from "../layout/Container";
-import { motion } from "motion/react"
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <SectionWrapper id="home"   >
-      <Container >
-     
-      <div
-        className="pt-15
-          flex
-          flex-col
-          justify-center
-          sm:flex-row
-         gap-8
-         lg:gap-12
-        "
-      >
-        {/* Left Content */}
-        <div className="flex-1">
-          <span className="text-sm font-bold tracking-[0.15em] uppercase mt-1 mb-4">
-            Fullstack Developer
-          </span>
-
-          <h1
-            className="
-              font-bold
-              text-white
-              leading-[0.9]
-              mb-4
-              text-[3rem]
-              sm:text-[2.5rem]
-              md:text-[clamp(3.5rem,5vw,4.5rem)]  
-            "
-          >
-            I BUILD
-            <br />
-            DIGITAL
-            <br />
-            EXPERIENCES
-          </h1>
-
-          <p
-            className="
-              text-base
-              font-semibold
-              uppercase
-              tracking-[0.08em]
-              text-accent
-              mb-4
-              max-w-[260px]
-              xl:max-w-[320px]
-            "
-          >
-            Through code, motion and storytelling.
-          </p>
-
-          <p
-            className="
-            hidden lg:block
-              text-sm
-              leading-[1.8]
-              text-text-2
-              max-w-[400px]
-              xl:max-w-[500px]
-              mb-8
-            "
-          >
-            I'm a fullstack developer and visual storyteller passionate
-            about building scalable web applications and capturing real
-            moments through technology, design, and creativity.
-          </p>
-
-          {/* Desktop Buttons */}
-          <div className="hidden sm:flex gap-4 max-w-[450px]">
-            <Button
-              className="flex-1 h-12 uppercase tracking-[0.15em]"
-              variant="primary"
+    <SectionWrapper id="home">
+      <Container>
+        <div
+          className="
+            pt-15
+            flex
+            flex-col
+            justify-center
+            sm:flex-row
+            gap-8
+            lg:gap-12
+          "
+        >
+          {/* Left Content */}
+          <div className="flex-1">
+            <motion.div
+              initial="hidden"
+              animate="show"
+              variants={{
+                hidden: {},
+                show: {
+                  transition: {
+                    staggerChildren: 0.15,
+                  },
+                },
+              }}
             >
-              View My Work
-            </Button>
+              {/* Role */}
+              <motion.span
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  show: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.6 },
+                  },
+                }}
+                className="
+                  block
+                  text-sm
+                  font-bold
+                  tracking-[0.15em]
+                  uppercase
+                  mt-1
+                  mb-4
+                "
+              >
+                Fullstack Developer
+              </motion.span>
 
-            <Button
-              className="flex-1 h-12 uppercase tracking-[0.15em]"
-              variant="outline"
-            >
-              Download Resume
-            </Button>
-          </div>
-          
-        </div>
+              {/* Heading */}
+              <motion.h1
+                variants={{
+                  hidden: { opacity: 0, y: 40 },
+                  show: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.8 },
+                  },
+                }}
+                className="
+                  font-bold
+                  text-white
+                  leading-[0.9]
+                  mb-4
+                  text-[3rem]
+                  sm:text-[2.5rem]
+                  md:text-[clamp(3.5rem,5vw,4.5rem)]
+                "
+              >
+                I BUILD
+                <br />
+                DIGITAL
+                <br />
+                EXPERIENCES
+              </motion.h1>
 
-        {/* Right Image */}
-        <div className="flex-1 flex justify-center">
-          <div className="relative isolate ">
-            <img
-              src={heroImage}
-              alt="Abhishek"
-              className="
-                w-full
-                max-w-[400px]
-                sm:max-w-[250px]
-                md:max-w-md
-                object-contain
-              "
-            />
+              {/* Accent Text */}
+              <motion.p
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  show: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.6 },
+                  },
+                }}
+                className="
+                  text-base
+                  font-semibold
+                  uppercase
+                  tracking-[0.08em]
+                  text-accent
+                  mb-4
+                  max-w-[260px]
+                  xl:max-w-[320px]
+                "
+              >
+                Through code, motion and storytelling.
+              </motion.p>
 
-            {/* Mobile Gradient Overlay */}
-            <div className="absolute inset-x-0 bottom-0 h-48 sm:h-72 bg-gradient-to-t from-black via-black/60 to-transparent sm:hidden">
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[90%] max-w-sm flex flex-col gap-4">
+              {/* Description */}
+              <motion.p
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  show: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.6 },
+                  },
+                }}
+                className="
+                  hidden
+                  lg:block
+
+                  text-sm
+                  leading-[1.8]
+                  text-text-2
+
+                  max-w-[400px]
+                  xl:max-w-[500px]
+
+                  mb-8
+                "
+              >
+                I'm a fullstack developer and visual storyteller
+                passionate about building scalable web applications
+                and capturing real moments through technology,
+                design, and creativity.
+              </motion.p>
+
+              {/* Buttons */}
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  show: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.6 },
+                  },
+                }}
+                className="hidden sm:flex gap-4 max-w-[450px]"
+              >
                 <Button
-                  className="h-12 uppercase tracking-[0.15em]"
+                  className="
+                    flex-1
+                    h-12
+                    uppercase
+                    tracking-[0.15em]
+                  "
                   variant="primary"
                 >
                   View My Work
                 </Button>
 
                 <Button
-                  className="h-12 uppercase tracking-[0.15em]"
+                  className="
+                    flex-1
+                    h-12
+                    uppercase
+                    tracking-[0.15em]
+                  "
                   variant="outline"
                 >
                   Download Resume
                 </Button>
+              </motion.div>
+
+              {/* Scroll Indicator */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.2 }}
+                className="
+                  mt-12
+                  flex
+                  items-center
+                  gap-3
+
+                  font-mono-custom
+                  text-[0.6rem]
+                  tracking-[0.15em]
+                  uppercase
+                  text-text-3
+                "
+              >
+                <div
+                  className="
+                    w-6
+                    h-9
+                    rounded-xl
+                    border
+                    border-text-3
+
+                    flex
+                    justify-center
+                    pt-1.5
+                  "
+                >
+                  <motion.span
+                    animate={{
+                      y: [0, 8, 0],
+                      opacity: [1, 0, 1],
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                    }}
+                    className="
+                      w-0.5
+                      h-1.5
+                      bg-accent
+                      rounded
+                    "
+                  />
+                </div>
+
+                Scroll to Explore
+              </motion.div>
+            </motion.div>
+          </div>
+
+          {/* Right Image */}
+          <div className="flex-1 flex justify-center">
+            <motion.div
+              initial={{
+                opacity: 0,
+                scale: 0.95,
+                x: 40,
+              }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+                x: 0,
+              }}
+              transition={{
+                duration: 0.8,
+                delay: 0.4,
+              }}
+              className="relative isolate"
+            >
+              <img
+                src={heroImage}
+                alt="Abhishek"
+                className="
+                  w-full
+                  max-w-[400px]
+                  sm:max-w-[250px]
+                  md:max-w-md
+
+                  object-contain
+                "
+              />
+
+              {/* Mobile Buttons */}
+              <div
+                className="
+                  absolute
+                  inset-x-0
+                  bottom-0
+
+                  h-48
+                  sm:h-72
+
+                  bg-gradient-to-t
+                  from-black
+                  via-black/60
+                  to-transparent
+
+                  sm:hidden
+                "
+              >
+                <div
+                  className="
+                    absolute
+                    bottom-4
+                    left-1/2
+                    -translate-x-1/2
+
+                    w-[90%]
+                    max-w-sm
+
+                    flex
+                    flex-col
+                    gap-4
+                  "
+                >
+                  <Button
+                    className="h-12 uppercase tracking-[0.15em]"
+                    variant="primary"
+                  >
+                    View My Work
+                  </Button>
+
+                  <Button
+                    className="h-12 uppercase tracking-[0.15em]"
+                    variant="outline"
+                  >
+                    Download Resume
+                  </Button>
+                </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
-      </div>
       </Container>
     </SectionWrapper>
   );
