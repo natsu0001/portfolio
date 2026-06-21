@@ -79,12 +79,15 @@ const Navbar = () => {
                 hidden
                 md:inline-flex
                 items-center
-                px-4
+                px-6
                 py-2
-                rounded-lg
-                bg-accent
-                text-bg
-                text-sm
+                rounded-md
+                border
+                border-accent
+                text-accent
+                hover:bg-accent
+                hover:text-bg
+               
                 font-medium
                 transition-all
                 hover:opacity-90
