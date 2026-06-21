@@ -10,14 +10,17 @@ const ExperienceSection = () => {
       <Container>
         {/* Header */}
 
-        <div className=" flex flex-col md:flex-row flex-1">
+        <div className=" flex flex-col md:flex-row gap-20 lg:gap-60 ">
+          <div className="flex-1">
           <SectionHeading
            label="Experience"
            title="My Journey So Far"
            />
+           </div>
 
+           
         {/* Timeline */}
-        <div className="relative">
+        <div className="relative ">
           {/* Vertical Line */}
           <div
             className="

@@ -10,8 +10,8 @@ const ExperienceItem = ({
   description,
 }: ExperienceItemProps) => {
   return (
-    <div className="relative pl-8 pb-12">
-      {/* Timeline Dot */}
+    <div className="relative pl-8 pb-10">
+      {/* Dot */}
       <div
         className="
           absolute
@@ -24,32 +24,39 @@ const ExperienceItem = ({
         "
       />
 
-      <span
-        className="
-          text-xs
-          uppercase
-          tracking-[0.2em]
-          text-accent
-        "
-      >
-        {year}
-      </span>
+      <div className="grid grid-cols-[100px_1fr] gap-6">
+        {/* Year */}
+        <div>
+          <span
+            className="
+              text-xs
+              uppercase
+              tracking-[0.2em]
+              text-accent
+            "
+          >
+            {year}
+          </span>
+        </div>
 
-      <h3 className="mt-2 text-xl font-semibold">
-        {title}
-      </h3>
+        {/* Content */}
+        <div>
+          <h3 className="text-xl font-semibold">
+            {title}
+          </h3>
 
-      <p
-        className="
-          mt-3
-          max-w-xl
-          text-sm
-          leading-relaxed
-          text-text-2
-        "
-      >
-        {description}
-      </p>
+          <p
+            className="
+              mt-2
+              text-sm
+              leading-relaxed
+              text-text-2
+            "
+          >
+            {description}
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
