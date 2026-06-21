@@ -1,34 +1,110 @@
+"use client";
+
+import { useState } from "react";
 import SectionHeading from "../common/SectionHeading";
 import Container from "../layout/Container";
 import SectionWrapper from "../layout/SectionWrapper";
-import TechCard from "./TechCard";
 import { techStack } from "@/data/tech";
 
 const TechSection = () => {
+  const [activeKey, setActiveKey] = useState(
+    techStack[0].key
+  );
+
+  const activeCategory =
+    techStack.find((c) => c.key === activeKey)!;
+
   return (
     <SectionWrapper id="tech">
       <Container>
-        {/* Header */}
+        <SectionHeading
+          label="Tech Stack"
+          title="Technologies I Work With"
+        />
 
-<SectionHeading
-  label="Tech Stack"
-  title="Technologies I Work With"
-/>
+        {/* Tabs */}
+        <div
+          className="
+            flex
+            overflow-x-auto
+            border-b
+            border-border
+            mb-10
 
+            [&::-webkit-scrollbar]:hidden
+          "
+        >
+          {techStack.map((category) => (
+            <button
+              key={category.key}
+              onClick={() => setActiveKey(category.key)}
+              className={`
+                px-6
+                py-4
+                text-xs
+                uppercase
+                tracking-[0.15em]
+                border-b-2
+                transition-all
+
+                ${
+                  activeKey === category.key
+                    ? "border-accent text-accent"
+                    : "border-transparent text-text-3 hover:text-text"
+                }
+              `}
+            >
+              {category.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Tech Grid */}
         <div
           className="
             grid
-            gap-6
-            md:grid-cols-2
-            xl:grid-cols-3
+            grid-cols-2
+            sm:grid-cols-3
+            md:grid-cols-4
+            lg:grid-cols-5
+            gap-px
+            bg-border
           "
         >
-          {techStack.map((group) => (
-            <TechCard
-              key={group.category}
-              category={group.category}
-              technologies={group.technologies}
-            />
+          {activeCategory.items.map((tech) => (
+            <div
+              key={tech.name}
+              className="
+                bg-bg
+                hover:bg-bg-2
+
+                transition-all
+                duration-300
+
+                p-6
+
+                flex
+                flex-col
+                items-center
+                justify-center
+                gap-3
+              "
+            >
+              <span className="text-3xl">
+                {tech.icon}
+              </span>
+
+              <span
+                className="
+                  text-xs
+                  uppercase
+                  tracking-[0.15em]
+                  text-text-2
+                "
+              >
+                {tech.name}
+              </span>
+            </div>
           ))}
         </div>
       </Container>

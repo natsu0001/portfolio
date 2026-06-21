@@ -8,7 +8,7 @@ const EducationSection = () => {
     <SectionWrapper id="education">
       <Container>
         {/* Header */}
-        <div className="md:flex justify-between">
+        <div className="lg:flex gap-7 justify-between">
           <SectionHeading
             label="Education"
             title="Learning & Growth"
@@ -16,8 +16,28 @@ const EducationSection = () => {
 
         <div
           className="
-            grid
-          "
+    mt-10
+
+    flex
+    gap-4
+
+    overflow-x-auto
+    snap-x
+    snap-mandatory
+    scroll-smooth
+
+    pb-4
+
+    [&::-webkit-scrollbar]:hidden
+    [-ms-overflow-style:none]
+    [scrollbar-width:none]
+
+    lg:grid
+    lg:grid-cols-3
+
+    lg:gap-0
+    lg:overflow-visible
+  "
         >
           {education.map((item) => (
             <EducationCard

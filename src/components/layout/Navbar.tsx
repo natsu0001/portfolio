@@ -52,7 +52,7 @@ const Navbar = () => {
           </a>
 
           {/* Desktop Nav */}
-          <ul className="hidden md:flex items-center gap-8">
+          <ul className="hidden lg:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <a
@@ -77,7 +77,7 @@ const Navbar = () => {
               href="#contact"
               className="
                 hidden
-                md:inline-flex
+                lg:inline-flex
                 items-center
                 px-6
                 py-2
@@ -99,7 +99,7 @@ const Navbar = () => {
             {/* Mobile Toggle */}
             <button
               className="
-                md:hidden
+                lg:hidden
                 p-2
                 rounded-md
                 hover:bg-white/10

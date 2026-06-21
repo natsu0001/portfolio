@@ -21,6 +21,7 @@ const ExperienceSection = () => {
            
         {/* Timeline */}
         <div className="relative ">
+          
           {/* Vertical Line */}
           <div
             className="
