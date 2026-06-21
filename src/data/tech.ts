@@ -3,13 +3,16 @@ export const techStack = [
     key: "frontend",
     label: "Frontend",
     items: [
-     
+      { name: "HTML5", icon: "🌐" },
+      { name: "CSS3", icon: "🎨" },
       { name: "JavaScript", icon: "🟨" },
       { name: "TypeScript", icon: "TS" },
       { name: "React", icon: "⚛️" },
       { name: "Next.js", icon: "▲" },
       { name: "Tailwind CSS", icon: "💨" },
-   
+      { name: "Framer Motion", icon: "🎞️" },
+      { name: "Redux Toolkit", icon: "🧰" },
+      { name: "Shadcn UI", icon: "🖌️" },
     ],
   },
 
@@ -21,9 +24,11 @@ export const techStack = [
       { name: "Express.js", icon: "🚂" },
       { name: "Prisma", icon: "🔺" },
       { name: "PostgreSQL", icon: "🐘" },
+      { name: "MongoDB", icon: "🍃" },
       { name: "MySQL", icon: "🗄️" },
-    
-     
+      { name: "REST API", icon: "🔌" },
+      { name: "JWT", icon: "🔐" },
+      { name: "Socket.io", icon: "⚡" },
     ],
   },
 
@@ -46,8 +51,10 @@ export const techStack = [
       { name: "Git", icon: "🔀" },
       { name: "GitHub", icon: "🐙" },
       { name: "VS Code", icon: "💻" },
+      { name: "Postman", icon: "📮" },
       { name: "Figma", icon: "🎨" },
       { name: "Vercel", icon: "▲" },
+      { name: "Docker", icon: "🐳" },
     ],
   },
 
