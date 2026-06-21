@@ -24,7 +24,7 @@ const ExperienceItem = ({
         "
       />
 
-      <div className="grid grid-cols-[100px_1fr] gap-6">
+      <div className="md:grid grid-cols-[100px_1fr] gap-6">
         {/* Year */}
         <div>
           <span
