@@ -9,10 +9,10 @@ const ExperienceSection = () => {
     <SectionWrapper id="experience">
       <Container>
         {/* Header */}
-<SectionHeading
-  label="Experience"
-  title="My Journey So Far"
-/>
+    <SectionHeading
+     label="Experience"
+     title="My Journey So Far"
+    />
 
         {/* Timeline */}
         <div className="relative">

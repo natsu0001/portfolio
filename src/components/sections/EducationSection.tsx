@@ -8,16 +8,15 @@ const EducationSection = () => {
     <SectionWrapper id="education">
       <Container>
         {/* Header */}
- <SectionHeading
-  label="Education"
-  title="Learning & Growth"
-/>
+        <div className="md:flex justify-between">
+          <SectionHeading
+            label="Education"
+            title="Learning & Growth"
+          />
 
         <div
           className="
             grid
-            md:grid-cols-2
-            gap-6
           "
         >
           {education.map((item) => (
@@ -30,6 +29,8 @@ const EducationSection = () => {
             />
           ))}
         </div>
+        </div>
+ 
       </Container>
     </SectionWrapper>
   );

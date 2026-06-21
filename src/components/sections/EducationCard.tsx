@@ -14,6 +14,7 @@ const EducationCard = ({
   return (
     <article
       className="
+       flex flex-col
         border
         border-border
         bg-bg
