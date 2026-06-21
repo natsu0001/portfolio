@@ -9,10 +9,12 @@ const ExperienceSection = () => {
     <SectionWrapper id="experience">
       <Container>
         {/* Header */}
-    <SectionHeading
-     label="Experience"
-     title="My Journey So Far"
-    />
+
+        <div className=" flex flex-col md:flex-row flex-1">
+          <SectionHeading
+           label="Experience"
+           title="My Journey So Far"
+           />
 
         {/* Timeline */}
         <div className="relative">
@@ -37,6 +39,8 @@ const ExperienceSection = () => {
             />
           ))}
         </div>
+        </div>
+    
       </Container>
     </SectionWrapper>
   );
