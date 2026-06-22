@@ -5,9 +5,14 @@ function App({ children }: { children: React.ReactNode }) {
     <>
       <LenisProvider />
 
-      <div className="min-h-screen bg-black text-white">
-        {children}
-      </div>
+      <div className="relative min-h-screen text-white">
+  <div className="fixed inset-0 bg-black" />
+  <div className="fixed inset-0 bg-grid-large" />
+
+  <div className="relative z-10">
+    {children}
+  </div>
+</div>
     </>
   );
 }
