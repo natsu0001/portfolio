@@ -1,4 +1,5 @@
-import heroImage from "@/assets/hero.png";
+import aboutImage from "@/assets/about.png";
+
 import Container from "../layout/Container";
 import SectionWrapper from "../layout/SectionWrapper";
 import { aboutData } from "@/data/about";
@@ -17,7 +18,7 @@ const AboutSection = () => {
         >
           {/* Image */}
 
-          <div className="relative">
+          <div className="hidden lg:block relative">
             <div
               className="
                 absolute
@@ -29,7 +30,7 @@ const AboutSection = () => {
             />
 
             <img
-              src={heroImage}
+              src={aboutImage}
               alt="Abhishek"
               className="
                 relative
@@ -132,6 +133,29 @@ const AboutSection = () => {
                 </div>
               ))}
             </div>
+          </div>
+          <div className=" relative lg:hidden">
+            <div
+              className="
+                absolute
+                inset-0
+                bg-accent/10
+                blur-3xl
+                rounded-full
+              "
+            />
+
+            <img
+              src={aboutImage}
+              alt="Abhishek"
+              className="
+                relative
+                z-10
+                w-full
+                max-w-md
+                mx-auto
+              "
+            />
           </div>
         </div>
       </Container>
