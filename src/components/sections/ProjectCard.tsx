@@ -39,7 +39,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
         flex
         flex-col
 
-        bg-bg
+        bg-gray-950
 
         transition-all
         duration-300
