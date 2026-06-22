@@ -15,6 +15,10 @@ const EducationCard = ({
   return (
     <article
     className="
+    group
+    relative
+    border
+    border-border
     min-w-[280px]
     sm:min-w-[320px]
 
