@@ -47,6 +47,7 @@ const HeroSection = () => {
                 }}
                 className="
                   block
+                  text-gold
                   text-sm
                   font-bold
                   tracking-[0.15em]
@@ -97,6 +98,7 @@ const HeroSection = () => {
                 }}
                 className="
                   text-base
+                  text-gold
                   font-semibold
                   uppercase
                   tracking-[0.08em]

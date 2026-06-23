@@ -17,6 +17,7 @@ const SectionHeading = ({
         <p
           className="
             text-xs
+            text-gold
             font-semibold
             tracking-[0.25em]
             uppercase

@@ -50,6 +50,7 @@ const AboutSection = () => {
 
               <p
                 className="
+                  text-gold
                   text-xs
                   uppercase
                   tracking-[0.25em]

@@ -84,3 +84,9 @@
     background-size: 10px 10px;
   }
 }
+
+@layer utilities {
+  .text-gold {
+    color: #b8860b;
+  }
+}
