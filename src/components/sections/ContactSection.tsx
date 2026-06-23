@@ -65,14 +65,16 @@ const ContactSection = () => {
 
           <div
             className="
+            
               flex
-              flex-col
+              
               sm:flex-row
               gap-4
               mb-10
+             
             "
           >
-            <Button asChild variant="primary">
+            <Button  asChild variant="primary">
               <a href={`mailto:${contactData.email}`}>
                 Email Me
               </a>
