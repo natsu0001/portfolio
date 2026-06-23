@@ -9,7 +9,31 @@ import { motion } from "framer-motion";
 const HeroSection = () => {
   return (
     <SectionWrapper id="home">
+       <div className="relative overflow-hidden">
+
+    {/* Hero Grid */}
+    <div
+      className="absolute inset-0 pointer-events-none"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(255,255,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.015) 1px,transparent 1px)",
+        backgroundSize: "80px 80px",
+      }}
+    />
+
+    {/* Dark Gold Glow Behind Image */}
+    <div
+      className="absolute inset-0 pointer-events-none"
+      style={{
+        background:
+          "radial-gradient(circle at 75% 40%, rgba(184,134,11,0.12) 0%, transparent 55%)",
+      }}
+    />
+
+    <div className="relative z-10">
+
       <Container>
+        
         <div
           className="
             pt-15
@@ -185,6 +209,10 @@ const HeroSection = () => {
 
           {/* Right Image */}
           <div className="flex-1 flex justify-center">
+            
+
+
+
             <motion.div
               initial={{
                 opacity: 0,
@@ -267,6 +295,8 @@ const HeroSection = () => {
           </div>
         </div>
       </Container>
+      </div>
+      </div>
     </SectionWrapper>
   );
 };
