@@ -249,7 +249,7 @@ const HeroSection = () => {
                 duration: 0.8,
                 delay: 0.4,
               }}
-              className="relative "
+              className="relative isolate"
             >
               <img
                 src={heroImage}
@@ -258,7 +258,8 @@ const HeroSection = () => {
                   w-full
                   max-w-[400px]
                   sm:max-w-[250px]
-                  md:max-w-md
+                  md:max-w-[300px]
+                  lg:max-w-md
 
                   object-contain
                 "
