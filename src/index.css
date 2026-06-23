@@ -2,14 +2,17 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/geist";
-
+@import "@fontsource/ubuntu/300.css";
+@import "@fontsource/ubuntu/400.css";
+@import "@fontsource/ubuntu/500.css";
+@import "@fontsource/ubuntu/700.css";
 @layer base {
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body {
     background: #0a0a0a;
     color: #f0ede8;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     overflow-x: hidden;
  /*{  cursor: none;}*/
   }
@@ -18,7 +21,7 @@
   ::-webkit-scrollbar-thumb { background: #c8783a; border-radius: 2px; }
   ::selection { background: rgba(200,120,58,0.3); color: #f0ede8; }
 
-  input, textarea, button { font-family: 'Space Grotesk', sans-serif; }
+  input, textarea, button { font-family: 'Ubuntu', sans-serif; }
 }
 
 @layer utilities {
