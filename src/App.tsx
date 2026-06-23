@@ -1,4 +1,5 @@
 import LenisProvider from "./providers/LenisProvider";
+import DotBackground from "./components/dot-background-demo";
 
 function App({ children }: { children: React.ReactNode }) {
   return (
@@ -6,13 +7,12 @@ function App({ children }: { children: React.ReactNode }) {
       <LenisProvider />
 
       <div className="relative min-h-screen text-white">
-  <div className="fixed inset-0 bg-black" />
-  <div className="fixed inset-0 bg-grid-large" />
+        <DotBackground />
 
-  <div className="relative z-10">
-    {children}
-  </div>
-</div>
+        <div className="relative z-10">
+          {children}
+        </div>
+      </div>
     </>
   );
 }

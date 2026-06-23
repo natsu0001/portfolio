@@ -14,9 +14,11 @@ import Footer from "../components/sections/Footer";
 const Home = () => {
   return (
     <>
+    
      <Navbar />
 
       <main>
+        
         <HeroSection />
 
         <ProjectsSection />
