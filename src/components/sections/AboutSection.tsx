@@ -18,29 +18,25 @@ const AboutSection = () => {
         >
           {/* Image */}
 
-          <div className="hidden lg:block relative">
-            <div
-              className="
-                absolute
-                inset-0
-                bg-accent/10
-                blur-3xl
-                rounded-full
-              "
-            />
+         <div className="hidden lg:block relative max-w-xl mx-auto w-full">
+  {/* Background Glow */}
+  <div className="absolute inset-0 bg-accent/10 blur-3xl " />
 
-            <img
-              src={aboutImage}
-              alt="Abhishek"
-              className="
-                relative
-                z-10
-                w-full
-                max-w-md
-                mx-auto
-              "
-            />
-          </div>
+  {/* Darkness Wrapper Container */}
+  <div className="relative z-10 w-full overflow-hidden bg-zinc-950 rounded-md">
+    <img
+      src={aboutImage}
+      alt="Abhishek"
+      className="
+        w-full
+        h-auto
+        block
+        object-cover
+        [mask-image:linear-gradient(to_bottom,black_50%,transparent_100%)]
+      "
+    />
+  </div>
+</div>
 
           {/* Content */}
 
@@ -135,29 +131,26 @@ const AboutSection = () => {
               ))}
             </div>
           </div>
-          <div className=" relative lg:hidden">
-            <div
-              className="
-                absolute
-                inset-0
-                bg-accent/10
-                blur-3xl
-                rounded-full
-              "
-            />
+          <div className="relative lg:hidden max-w-xl mx-auto w-full">
+  {/* Background Glow */}
+  <div className="absolute inset-0 bg-accent/10 blur-3xl " />
 
-            <img
-              src={aboutImage}
-              alt="Abhishek"
-              className="
-                relative
-                z-10
-                w-full
-                max-w-md
-                mx-auto
-              "
-            />
-          </div>
+  {/* Darkness Wrapper Container */}
+  <div className="relative z-10 w-full overflow-hidden bg-zinc-950 rounded-md">
+    <img
+      src={aboutImage}
+      alt="Abhishek"
+      className="
+        w-full
+        h-auto
+        block
+        object-cover
+        [mask-image:linear-gradient(to_bottom,black_50%,transparent_100%)]
+      "
+    />
+  </div>
+</div>
+
         </div>
       </Container>
     </SectionWrapper>
