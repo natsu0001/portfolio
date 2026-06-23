@@ -33,6 +33,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
 
         border
         border-border
+        divide-dashed
 
         p-6
 

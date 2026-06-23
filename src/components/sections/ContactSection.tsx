@@ -104,6 +104,8 @@ const ContactSection = () => {
               className="
                 border
                 border-border
+                card-pattern-gold
+                text-gold
                 p-5
                 flex
                 items-center
@@ -122,6 +124,8 @@ const ContactSection = () => {
               className="
                 border
                 border-border
+                card-pattern-gold
+                text-gold
                 p-5
                 flex
                 items-center
@@ -140,6 +144,8 @@ const ContactSection = () => {
               className="
                 border
                 border-border
+                card-pattern-gold
+                text-gold
                 p-5
                 flex
                 items-center
@@ -148,7 +154,7 @@ const ContactSection = () => {
                 transition-colors
               "
             >
-              <span>Blog</span>
+              <span>Discord</span>
               <ArrowUpRight size={18} />
             </a>
 
@@ -158,6 +164,8 @@ const ContactSection = () => {
               className="
                 border
                 border-border
+                card-pattern-gold
+                text-gold
                 p-5
                 flex
                 items-center
@@ -166,7 +174,7 @@ const ContactSection = () => {
                 transition-colors
               "
             >
-              <span>Photography</span>
+              <span>X</span>
               <ArrowUpRight size={18} />
             </a>
           </div>
