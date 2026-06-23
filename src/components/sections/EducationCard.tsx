@@ -24,7 +24,7 @@ const EducationCard = ({
 
     lg:min-w-0
 
-    bg-gray-950
+   card-pattern-gold
     p-8
     transition-all
     duration-300
