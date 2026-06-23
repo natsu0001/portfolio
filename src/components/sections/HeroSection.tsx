@@ -16,7 +16,7 @@ const HeroSection = () => {
       className="absolute inset-0 pointer-events-none"
       style={{
         backgroundImage:
-          "linear-gradient(rgba(255,255,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.015) 1px,transparent 1px)",
+          "linear-gradient(rgba(255,255,255,0.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.08) 1px,transparent 1px)",
         backgroundSize: "80px 80px",
       }}
     />
@@ -29,8 +29,29 @@ const HeroSection = () => {
           "radial-gradient(circle at 75% 40%, rgba(184,134,11,0.12) 0%, transparent 55%)",
       }}
     />
+    <div
+  className="
+    absolute inset-0
+    pointer-events-none
+    bg-gradient-to-t
+    from-black
+    via-black/10
+    to-transparent
+  "
+/>
 
-    <div className="relative z-10">
+
+
+
+
+
+
+
+
+
+
+
+    <div className="relative z-10  ">
 
       <Container>
         
@@ -228,7 +249,7 @@ const HeroSection = () => {
                 duration: 0.8,
                 delay: 0.4,
               }}
-              className="relative isolate"
+              className="relative "
             >
               <img
                 src={heroImage}
@@ -242,6 +263,16 @@ const HeroSection = () => {
                   object-contain
                 "
               />
+              <div
+    className="
+      absolute inset-0
+      bg-gradient-to-t
+      from-black
+      via-black/10
+      to-transparent
+      pointer-events-none
+    "
+  />
 
               {/* Mobile Buttons */}
               <div
