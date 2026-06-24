@@ -4,9 +4,11 @@ type ExperienceItemProps = {
   year: string;
   title: string;
   description: string;
+  index: number;
 };
 
 const ExperienceItem = ({
+  index,
   year,
   title,
   description,
@@ -20,43 +22,65 @@ const ExperienceItem = ({
       className="relative pl-12 pb-12 last:pb-0"
     >
       {/* Timeline Line */}
-      <div
-        className="
-          absolute
-          left-[6px]
-          top-0
-          bottom-0
-          w-[2px]
+      <motion.div
+  initial={{ height: 0 }}
+  whileInView={{ height: "100%" }}
+  viewport={{ once: true }}
+  transition={{
+    duration: 1.2,
+    ease: "easeOut",
+  }}
+  className="
+    absolute
+    left-[5px]
+    top-0
 
-          bg-gradient-to-b
-          from-[#8B6914]
-          via-[#B8860B]
-          to-[#D4AF37]
+    w-[3px]
 
-          opacity-50
-        "
-      />
+    bg-gradient-to-b
+    from-[#8B6914]
+    via-[#B8860B]
+    to-[#D4AF37]
+
+    opacity-50
+  "
+/>
 
       {/* Timeline Dot */}
-      <div
-        className="
-          absolute
-          left-0
-          top-1
+    <motion.div
+ initial={{
+    scale: 0,
+    opacity: 0,
+    boxShadow: "0 0 0 rgba(184,134,11,0)",
+  }}
+  whileInView={{
+    scale: 1,
+    opacity: 1,
+    boxShadow: "0 0 20px rgba(184,134,11,0.6)",
+  }}
+  viewport={{ once: true }}
+  transition={{
+    duration: 0.4,
+    delay: 0.3 + index * 0.3,
+  }}
+  className="
+    absolute
+    left-0
+    top-1
 
-          h-4
-          w-4
+    h-4
+    w-4
 
-          rounded-full
+    rounded-full
 
-          border-2
-          border-[#B8860B]
+    border-2
+    border-[#B8860B]
 
-          bg-black
+    bg-black
 
-          shadow-[0_0_12px_rgba(184,134,11,0.35)]
-        "
-      />
+    shadow-[0_0_12px_rgba(184,134,11,0.35)]
+  "
+/>
 
       <div className="grid gap-4 md:grid-cols-[120px_1fr] md:gap-8">
         {/* Year */}

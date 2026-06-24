@@ -27,7 +27,13 @@ const ExperienceSection = () => {
 
            
         {/* Timeline */}
-        <div className="relative ">
+        <motion.div
+  className="relative"
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.5, delay: 0.2 }}
+>
           
           {/* Vertical Line */}
           <div
@@ -41,15 +47,16 @@ const ExperienceSection = () => {
             "
           />
 
-          {experience.map((item) => (
+          {experience.map((item, index) => (
             <ExperienceItem
               key={item.year}
+              index={index}
               year={item.year}
               title={item.title}
               description={item.description}
             />
           ))}
-        </div>
+        </motion.div>
         </div>
     
       </Container>
