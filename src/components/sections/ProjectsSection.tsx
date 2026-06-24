@@ -4,16 +4,24 @@ import { projects } from "@/data/projects";
 import { ArrowUpRight } from "lucide-react";
 import SectionHeading from "../common/SectionHeading";
 import ProjectCard from "./ProjectCard";
-
+import { motion } from "framer-motion";
 const ProjectsSection = () => {
   return (
     <SectionWrapper id="projects">
       <Container>
       <div className="flex items-center justify-between"> 
+        <motion.div
+           className="flex-1"
+           initial={{ opacity: 0, y: 30 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           transition={{ duration: 0.6 }}
+          >
          <SectionHeading
           label="Featured Projects"
           title="Things I've built recently"
         />
+        </motion.div>
           <div className=" mt-10 flex justify-center">
           <a
             href="/projects"
