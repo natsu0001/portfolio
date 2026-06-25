@@ -5,6 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 import SectionHeading from "../common/SectionHeading";
 import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
+
 const ProjectsSection = () => {
   return (
     <SectionWrapper id="projects">

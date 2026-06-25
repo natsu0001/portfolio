@@ -23,12 +23,16 @@ const Navbar = () => {
     <nav
       className={`
         fixed
+        mx-auto w-full max-w-7xl
         top-0
         left-0
         right-0
         z-50
         transition-all
         duration-300
+        md:px-5
+        md:py-2
+        card-pattern-gold
         ${
           scrolled
             ? "bg-bg/90 backdrop-blur-md border-b border-border"
@@ -36,7 +40,7 @@ const Navbar = () => {
         }
       `}
     >
-      <Container>
+      
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a
@@ -52,7 +56,7 @@ const Navbar = () => {
           </a>
 
           {/* Desktop Nav */}
-          <ul className="hidden lg:flex items-center gap-8">
+          <ul className="hidden text-gold font-extrabold lg:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <a
@@ -115,7 +119,7 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <div
           className={`
-            md:hidden
+            lg:hidden
             overflow-hidden
             transition-all
             duration-300
@@ -132,7 +136,8 @@ const Navbar = () => {
               rounded-xl
               border
               border-border
-              bg-bg/95
+              bg-bg/100
+              card-patern-gold
               backdrop-blur-md
               p-3
             "
@@ -148,6 +153,8 @@ const Navbar = () => {
                       px-4
                       py-3
                       rounded-lg
+                      text-gold
+                      font-extrabold
                       text-text-2
                       hover:bg-accent/10
                       hover:text-accent
@@ -181,7 +188,7 @@ const Navbar = () => {
             </a>
           </div>
         </div>
-      </Container>
+      
     </nav>
   );
 };
