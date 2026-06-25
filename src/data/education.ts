@@ -19,8 +19,8 @@ export const education = [
 
   {
     id: 3,
-    degree: "St. Clare's Convent Senior Secondary School",
-    institution: "St. clares Convent high School",
+    degree: "High Schooling  Education",
+    institution: "St. Clares Convent high School",
     duration: "2014 — 2018",
     description:
       "Science , Mathematics , Physics, Chemistry , Literature and Social Studies .",
