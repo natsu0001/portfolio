@@ -5,6 +5,11 @@ import { ArrowUpRight } from "lucide-react";
 import SectionHeading from "../common/SectionHeading";
 import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
 
 const ProjectsSection = () => {
   return (
@@ -55,40 +60,55 @@ const ProjectsSection = () => {
         </div>
         </div>
 
-        <div
-          className="
-            mt-10
+       {/* Mobile Swiper */}
+<div className="mt-10 md:hidden">
+  <Swiper
+    modules={[Pagination]}
+    pagination={{ clickable: true }}
+    spaceBetween={20}
+    slidesPerView={1.1}
+  >
+    {projects.slice(0, 4).map((project, index) => (
+      <SwiperSlide key={project.id}>
+        <ProjectCard
+          project={project}
+          index={index}
+        />
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</div>
 
-            flex
-            gap-4
-
-            overflow-x-auto
-            snap-x
-            snap-mandatory
-            scroll-smooth
-
-            pb-4
-
-            [&::-webkit-scrollbar]:hidden
-            [-ms-overflow-style:none]
-            [scrollbar-width:none]
-
-            md:grid
-            md:grid-cols-2
-            xl:grid-cols-4
-
-            md:gap-0
-            md:overflow-visible
-          "
-        >
-          {projects.slice(0, 4).map((project, index) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              index={index}
-            />
-          ))}
-        </div>
+{/* Desktop Grid */}
+<motion.div
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: true, margin: "-100px" }}
+  variants={{
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.12,
+      },
+    },
+  }}
+  className="
+    hidden
+    md:grid
+    md:grid-cols-2
+    xl:grid-cols-4
+    gap-6
+    mt-10
+  "
+>
+  {projects.slice(0, 4).map((project, index) => (
+    <ProjectCard
+      key={project.id}
+      project={project}
+      index={index}
+    />
+  ))}
+</motion.div>
 
         {/* CTA */}
       
