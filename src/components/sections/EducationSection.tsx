@@ -39,13 +39,14 @@ const EducationSection = () => {
     lg:overflow-visible
   "
         >
-          {education.map((item) => (
+          {education.map((item,index) => (
             <EducationCard
               key={item.id}
               degree={item.degree}
               institution={item.institution}
               duration={item.duration}
               description={item.description}
+              index={index}
             />
           ))}
         </div>

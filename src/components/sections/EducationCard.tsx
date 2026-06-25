@@ -1,35 +1,45 @@
 import { GraduationCap } from "lucide-react";
+import { motion } from "framer-motion";
 
 type EducationCardProps = {
   degree: string;
   institution: string;
   duration: string;
   description: string;
+  index: number;
 };
 
 const EducationCard = ({
   degree,
   institution,
   duration,
+  index,
 }: EducationCardProps) => {
   return (
-    <article
-    className="
-    group
-    relative
-    border
-    border-border
-    min-w-[280px]
-    sm:min-w-[320px]
-
-    lg:min-w-0
-
-   card-pattern-gold
-    p-8
-    transition-all
-    duration-300
-    hover:bg-bg-3
-  "
+    <motion.article
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{
+        duration: 0.5,
+        delay: index * 0.1,
+        ease: [0.16, 1, 0.3, 1],
+      }}
+      className="
+        group
+        relative
+        border
+        border-border
+        min-w-[280px]
+        sm:min-w-[320px]
+        lg:min-w-0
+        card-pattern-gold
+        p-8
+        transition-all
+        duration-300
+        hover:bg-bg-3
+        hover:-translate-y-1
+      "
     >
       {/* Icon */}
       <div
@@ -105,7 +115,7 @@ const EducationCard = ({
         <span className="w-1.5 h-1.5 rounded-full bg-accent" />
         Degree
       </div>
-    </article>
+    </motion.article>
   );
 };
 
