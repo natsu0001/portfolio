@@ -6,6 +6,50 @@
 @import "@fontsource/ubuntu/400.css";
 @import "@fontsource/ubuntu/500.css";
 @import "@fontsource/ubuntu/700.css";
+@theme {
+  --color-bg: #0a0a0a;
+  --color-bg-2: #111111;
+  --color-bg-3: #161616;
+
+  --color-surface: #1a1a1a;
+  --color-surface-2: #222222;
+
+  --color-accent: #c8783a;
+  --color-accent-2: #e8924e;
+
+  --color-text: #f0ede8;
+  --color-text-2: #9a9690;
+  --color-text-3: #5a5652;
+
+  --color-border: rgba(255, 255, 255, 0.06);
+  --color-border-hover: rgba(255, 255, 255, 0.12);
+
+  --tracking-widest2: 0.15em;
+}
+@keyframes scrollDown {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+}
+@layer utilities {
+  .animate-pulse-slow {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-spin-slow {
+    animation: spin 20s linear infinite;
+  }
+
+  .animate-scroll-down {
+    animation: scrollDown 2s infinite;
+  }
+}
 @layer base {
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }

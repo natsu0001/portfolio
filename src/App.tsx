@@ -5,13 +5,16 @@ function App({ children }: { children: React.ReactNode }) {
   return (
     <>
       <LenisProvider />
+       <div className="fixed inset-0 -z-10">
+        <DotBackground />
+      </div>
 
       <div className="relative min-h-screen text-white">
-        <DotBackground />
+        
 
-        <div className="relative z-10">
+        
           {children}
-        </div>
+        
       </div>
     </>
   );

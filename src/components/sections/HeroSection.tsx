@@ -254,15 +254,15 @@ const HeroSection = () => {
                 "
               />
               <div
-    className="
-      absolute inset-0
-      bg-gradient-to-t
-      from-black
-      via-black/10
-      to-transparent
-      pointer-events-none
-    "
-  />
+                   className="
+                   absolute inset-0
+                   bg-gradient-to-t
+                   from-black
+                   via-black/10
+                   to-transparent
+                   pointer-events-none
+                 "
+                />
 
               {/* Mobile Buttons */}
               <div

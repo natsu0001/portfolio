@@ -25,7 +25,11 @@ const Home = () => {
 
         <ExperienceSection />
 
+       
+
         <EducationSection />
+
+       
 
         <TechStackSection />
 
