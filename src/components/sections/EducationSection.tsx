@@ -5,7 +5,7 @@ import { education } from "@/data/education";
 import SectionHeading from "../common/SectionHeading";
 const EducationSection = () => {
   return (
-    <SectionWrapper id="education"  className="bg-zinc-900" >
+    <SectionWrapper id="education"  className="bg-bg-2" >
       <Container>
         {/* Header */}
         <div className="lg:flex gap-7 justify-between">
