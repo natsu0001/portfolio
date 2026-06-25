@@ -23,14 +23,14 @@ const Navbar = () => {
     <nav
       className={`
         fixed
-        mx-auto w-full max-w-7xl
+        mx-auto w-full 
         top-0
         left-0
         right-0
         z-50
         transition-all
         duration-300
-        md:px-5
+        md:px-9
         md:py-2
         card-pattern-gold
         ${
