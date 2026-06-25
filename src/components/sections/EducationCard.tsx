@@ -17,28 +17,35 @@ const EducationCard = ({
 }: EducationCardProps) => {
   return (
     <motion.article
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{
+       variants={{
+    hidden: {
+      opacity: 0,
+      y: 30,
+    },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
         duration: 0.5,
-        delay: index * 0.1,
         ease: [0.16, 1, 0.3, 1],
-      }}
+      },
+    },
+  }}
       className="
-        group
-        relative
-        border
-        border-border
-        min-w-[280px]
-        sm:min-w-[320px]
-        lg:min-w-0
-        card-pattern-gold
-        p-8
-        transition-all
-        duration-300
-        hover:bg-bg-3
-        hover:-translate-y-1
+       snap-center
+    group
+    relative
+    border
+    border-border
+    min-w-[280px]
+    sm:min-w-[320px]
+    lg:min-w-0
+    card-pattern-gold
+    p-8
+    transition-all
+    duration-300
+    hover:bg-bg-2
+    hover:-translate-y-1
       "
     >
       {/* Icon */}
