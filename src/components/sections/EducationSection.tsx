@@ -4,6 +4,11 @@ import EducationCard from "./EducationCard";
 import { education } from "@/data/education";
 import SectionHeading from "../common/SectionHeading";
 import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
 const EducationSection = () => {
   return (
     <SectionWrapper id="education"  className="bg-bg-2" >
@@ -24,8 +29,28 @@ const EducationSection = () => {
             title="Learning & Growth"
           />
           </motion.div>
+          <div className="mt-10 lg:hidden">
+  <Swiper
+    modules={[Pagination]}
+    pagination={{ clickable: true }}
+    spaceBetween={16}
+    slidesPerView={1.1}
+  >
+    {education.map((item, index) => (
+      <SwiperSlide key={item.id}>
+        <EducationCard
+          degree={item.degree}
+          institution={item.institution}
+          duration={item.duration}
+          description={item.description}
+          index={index}
+        />
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</div>
 
-          <motion.div
+         <motion.div
   initial="hidden"
   whileInView="show"
   viewport={{ once: true, margin: "-100px" }}
@@ -36,45 +61,26 @@ const EducationSection = () => {
         staggerChildren: 0.12,
       },
     },
-  }}>
-
-        <div
-          className="
-    mt-10
-
-    flex
-    gap-4
-
-    overflow-x-auto
-    snap-x
-    snap-mandatory
-    scroll-smooth
-
-    pb-4
-
-    [&::-webkit-scrollbar]:hidden
-    [-ms-overflow-style:none]
-    [scrollbar-width:none]
-
+  }}
+  className="
+    hidden
     lg:grid
     lg:grid-cols-3
-
-    lg:gap-0
-    lg:overflow-visible
+    
+    mt-10
   "
-        >
-          {education.map((item,index) => (
-            <EducationCard
-              key={item.id}
-              degree={item.degree}
-              institution={item.institution}
-              duration={item.duration}
-              description={item.description}
-              index={index}
-            />
-          ))}
-        </div>
-        </motion.div>
+>
+  {education.map((item, index) => (
+    <EducationCard
+      key={item.id}
+      degree={item.degree}
+      institution={item.institution}
+      duration={item.duration}
+      description={item.description}
+      index={index}
+    />
+  ))}
+</motion.div>
         </div>
  
       </Container>

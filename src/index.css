@@ -134,3 +134,11 @@
     color: #b8860b;
   }
 }
+.swiper-pagination-bullet {
+  background: rgba(147, 107, 9, 0.35) !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #b8860b !important;
+}

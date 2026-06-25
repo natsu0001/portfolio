@@ -17,20 +17,20 @@ const EducationCard = ({
 }: EducationCardProps) => {
   return (
     <motion.article
-       variants={{
-    hidden: {
-      opacity: 0,
-      y: 30,
+    variants={{
+  hidden: {
+    opacity: 0,
+    y: 30,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: [0.16, 1, 0.3, 1],
     },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: [0.16, 1, 0.3, 1],
-      },
-    },
-  }}
+  },
+}}
       className="
        snap-center
     group
