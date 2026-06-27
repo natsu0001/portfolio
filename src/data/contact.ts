@@ -1,15 +1,15 @@
 export const contactData = {
   email: "your@email.com",
 
-  github: "https://github.com",
+  location: "Assam, India",
 
-  linkedin:
-    "https://linkedin.com",
+  github: "https://github.com/yourusername",
+
+  linkedin: "https://linkedin.com/in/yourusername",
+
+  photography: "https://x.com/yourusername",
+
+  blog: "https://discord.gg/yourinvite",
 
   resume: "/resume.pdf",
-
-  blog: "https://your-blog-site.com",
-
-  photography:
-    "https://your-photo-site.com",
 };
