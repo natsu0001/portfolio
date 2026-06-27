@@ -1,5 +1,3 @@
-// about.data.ts
-
 export const aboutData = {
   title: "Building products, documenting experiences.",
 
@@ -9,18 +7,32 @@ export const aboutData = {
   story:
     "Beyond development, I'm passionate about photography and storytelling. I enjoy capturing moments, exploring new perspectives, and combining creativity with technology.",
 
+  signature: "Devgrind JB.",
+
+  location: "Assam, India",
+
+  role: "Full Stack Developer",
+
   stats: [
     {
-      value: "10+",
+      value: 10,
+      suffix: "+",
       label: "Projects Built",
     },
     {
-      value: "15+",
+      value: 15,
+      suffix: "+",
       label: "Technologies",
     },
     {
-      value: "2+",
+      value: 2,
+      suffix: "+",
       label: "Years Learning",
+    },
+    {
+      value: 100,
+      suffix: "%",
+      label: "Passion",
     },
   ],
 };
