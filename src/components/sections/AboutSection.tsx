@@ -5,6 +5,8 @@ import { aboutData } from "@/data/about";
 import Container from "../layout/Container";
 import SectionWrapper from "../layout/SectionWrapper";
 import { motion } from "framer-motion";
+import StatCard from "./StatCard";
+
 
 const AboutSection = () => {
   return (
@@ -145,48 +147,15 @@ shadow-[0_20px_80px_rgba(0,0,0,0.45)]">
     {/* STATS */}
 
     <div className="grid grid-cols-2 gap-5 mt-8">
-
-      {aboutData.stats.map((stat, index) => (
-        <motion.div
-          key={stat.label}
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            delay: index * 0.15,
-            duration: 0.45,
-          }}
-          className="
-            group
-
-            border
-            border-border
-
-            hover:border-accent/40
-            hover:bg-bg-2
-
-            transition-all
-            duration-300
-
-            hover:-translate-y-1
-
-            p-6
-          "
-        >
-          <h3 className="text-5xl font-bold leading-none">
-            {stat.value}
-            <span className="text-accent">
-              {stat.suffix}
-            </span>
-          </h3>
-
-          <p className="mt-3 text-[11px] uppercase tracking-[0.2em] text-text-3">
-            {stat.label}
-          </p>
-        </motion.div>
-      ))}
-
-    </div>
+  {aboutData.stats.map((stat) => (
+    <StatCard
+      key={stat.label}
+      value={stat.value}
+      suffix={stat.suffix}
+      label={stat.label}
+    />
+  ))}
+</div>
 
   </motion.div>
 
