@@ -11,7 +11,7 @@ export const techStack = [
       { name: "Next.js", icon: "▲" },
       { name: "Tailwind CSS", icon: "💨" },
       { name: "Framer Motion", icon: "🎞️" },
-      { name: "Redux Toolkit", icon: "🧰" },
+     
       { name: "Shadcn UI", icon: "🖌️" },
     ],
   },

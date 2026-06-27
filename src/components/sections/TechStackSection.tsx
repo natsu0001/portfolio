@@ -1,5 +1,5 @@
 "use client";
-
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import SectionHeading from "../common/SectionHeading";
 import Container from "../layout/Container";
@@ -17,106 +17,134 @@ const TechSection = () => {
   return (
     <SectionWrapper id="tech">
       <Container>
+         <motion.div
+           initial={{ opacity: 0, x: -30 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true, margin: "-100px" }}
+  transition={{
+    duration: 0.6,
+    ease: [0.16, 1, 0.3, 1],
+  }}>
         <SectionHeading
           label="Tech Stack"
           title="Technologies I Work With"
         />
+        </motion.div>
 
         {/* Tabs */}
-        <div
-          className="
-            flex
-            overflow-x-auto
-            border-b
-            border-border
-            mb-10
-
-            [&::-webkit-scrollbar]:hidden
-          "
-        >
+       <motion.div
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: true }}
+    variants={{
+        hidden: {},
+        show:{
+            transition:{
+                staggerChildren:0.08
+            }
+        }
+    }}
+    className="flex overflow-x-auto border-b border-border mb-10"
+>
           {techStack.map((category) => (
             <button
               key={category.key}
               onClick={() => setActiveKey(category.key)}
               className={`
-                px-6
-                py-4
-                text-xs
-                uppercase
-                tracking-[0.15em]
-                border-b-2
-                transition-all
+  px-6
+  py-4
+  text-[11px]
+  uppercase
+  tracking-[0.18em]
+  whitespace-nowrap
+  border-b-2
+  transition-all
+  duration-300
 
-                ${
-                  activeKey === category.key
-                    ? "border-accent text-accent"
-                    : "border-transparent text-text-3 hover:text-text"
-                }
-              `}
+  ${
+    activeKey === category.key
+      ? "border-accent text-accent"
+      : "border-transparent text-text-3 hover:text-text"
+  }
+`}
             >
               {category.label}
             </button>
           ))}
-        </div>
+        </motion.div>
 
         {/* Tech Grid */}
-        <div
+       <AnimatePresence mode="wait">
+  <motion.div
+    key={activeKey}
+    initial={{ opacity: 0, y: 15 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -15 }}
+    transition={{ duration: 0.35 }}
+    className="
+      grid
+      grid-cols-3
+      sm:grid-cols-4
+      md:grid-cols-5
+      lg:grid-cols-6
+
+      border
+      border-border
+    "
+  >
+    {activeCategory.items.map((tech, index) => (
+      <motion.div
+        key={tech.name}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: index * 0.05,
+          duration: 0.3,
+        }}
+        className="
+          group
+
+          border-r
+          border-b
+          border-border
+
+          aspect-square
+
+          flex
+          flex-col
+          items-center
+          justify-center
+          gap-4
+
+          transition-all
+          duration-300
+
+          hover:bg-bg-2
+          
+        "
+      >
+        <span className="text-4xl transition-transform duration-300 group-hover:scale-110">
+          {tech.icon}
+        </span>
+
+        <span
           className="
-            mt-10
+            text-[11px]
+            uppercase
+            tracking-[0.18em]
+            text-text-2
 
-    flex
-    gap-4
+            transition-colors
 
-    overflow-x-auto
-    snap-x
-    snap-mandatory
-    scroll-smooth
-
-    pb-4
-
-    [&::-webkit-scrollbar]:hidden
-    [-ms-overflow-style:none]
-    [scrollbar-width:none]
-
-    
+            group-hover:text-accent
           "
         >
-          {activeCategory.items.map((tech) => (
-            <div
-              key={tech.name}
-              className="
-                bg-bg
-                hover:bg-bg-2
-
-                transition-all
-                duration-300
-
-                p-6
-
-                flex
-                flex-col
-                items-center
-                justify-center
-                gap-3
-              "
-            >
-              <span className="text-3xl">
-                {tech.icon}
-              </span>
-
-              <span
-                className="
-                  text-xs
-                  uppercase
-                  tracking-[0.15em]
-                  text-text-2
-                "
-              >
-                {tech.name}
-              </span>
-            </div>
-          ))}
-        </div>
+          {tech.name}
+        </span>
+      </motion.div>
+    ))}
+  </motion.div>
+</AnimatePresence>
       </Container>
     </SectionWrapper>
   );
