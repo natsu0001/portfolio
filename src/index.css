@@ -134,6 +134,10 @@
     color: #b8860b;
   }
 }
+
+.swiper {
+  padding-bottom: 30px;
+}
 .swiper-pagination {
   margin-top: 1rem;
 }
