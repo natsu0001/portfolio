@@ -7,7 +7,7 @@ export const aboutData = {
   story:
     "Beyond development, I'm passionate about photography and storytelling. I enjoy capturing moments, exploring new perspectives, and combining creativity with technology.",
 
-  signature: "Devgrind JB.",
+  signature: "Abhishek.",
 
   location: "Assam, India",
 

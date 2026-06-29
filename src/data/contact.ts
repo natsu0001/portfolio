@@ -1,5 +1,5 @@
 export const contactData = {
-  email: "your@email.com",
+  email: "talukdarabhishek157@email.com",
 
   location: "Assam, India",
 
