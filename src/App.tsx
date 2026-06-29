@@ -5,16 +5,13 @@ function App({ children }: { children: React.ReactNode }) {
   return (
     <>
       <LenisProvider />
-       <div className="fixed inset-0 -z-10">
+
+      <div className="fixed inset-0 -z-10 overflow-hidden">
         <DotBackground />
       </div>
 
-      <div className="relative min-h-screen text-white">
-        
-
-        
-          {children}
-        
+      <div className="relative min-h-screen overflow-x-hidden text-white">
+        {children}
       </div>
     </>
   );
