@@ -36,8 +36,9 @@ const ProjectsSection = () => {
               items-center
               gap-2
 
-              px-6
-              py-3
+              px-2
+              py-2
+              
 
               border
               border-border
@@ -54,7 +55,7 @@ const ProjectsSection = () => {
               hover:text-accent
             "
           >
-            View All Projects
+            View All
             <ArrowUpRight size={14} />
           </a>
         </div>
