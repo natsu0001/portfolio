@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "@/data";
-import Container from "./Container";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

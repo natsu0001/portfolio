@@ -13,7 +13,7 @@ const EducationCard = ({
   degree,
   institution,
   duration,
-  index,
+  
 }: EducationCardProps) => {
   return (
     <motion.article
